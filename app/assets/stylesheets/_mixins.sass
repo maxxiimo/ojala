@@ -1,0 +1,53 @@
+/* RWD Marker
+  -----------------------
+
+@mixin rwd-marker
+  content: "6"
+  position: fixed
+  bottom: 50px
+  right: 7px
+  line-height: 1
+  width: 40px
+  height: 40px
+  font-size: 32px
+  text-align: center
+  background-color: red
+  z-index: 10000
+  +border-radius(5px)
+  +opacity(.50)
+
+  +breakpoint($tablet)
+    background-color: aqua
+    content: "9"
+
+  +breakpoint($desktop)
+    background-color: orange
+    content: "12"
+
+
+/* Helpers
+  -----------------------
+
+@mixin hidden
+  display: none !important
+  visibility: hidden
+
+@mixin reveal-hidden
+  display: block !important
+  visibility: visible
+
+@mixin reveal-hidden-inline
+  display: inline-block !important
+  visibility: visible
+
+
+/* Icon Fonts
+  -----------------------
+
+@mixin data-icon
+  font-family: 'icon-fonts'
+  content: attr(data-icon)
+  speak: none
+  font-weight: normal
+  line-height: 1
+  -webkit-font-smoothing: antialiased

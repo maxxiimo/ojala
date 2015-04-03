@@ -1,0 +1,135 @@
+/* Fonts
+  -----------------------
+
+// stacks...
+
+// http://unitinteractive.com/blog/2008/06/26/better-css-font-stacks/
+
+$arial:                Arial, "Helvetica Neue", Helvetica, sans-serif
+$helvetica:            "Helvetica Neue", "Helvetica", Arial, sans-serif
+$verdana:              Verdana, Geneva, Tahoma, sans-serif
+$geneva:               Geneva, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif
+$georgia:              Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif
+
+// typekit...
+
+
+
+// google web fonts...
+
+// http://designshack.net/articles/css/10-great-google-font-combinations-you-can-copy/
+// http://designshack.net/articles/typography/10-more-great-google-font-combinations-you-can-copy/
+
+$droid-serif:          "Droid Serif", Georgia, Times, serif
+$droid-sans:           "Droid Sans", Helvetica, Arial, sans-serif
+
+// embedded fonts...
+
+// @font-face
+//   font-family: 'FONT_NAME'
+//   font-weight: normal
+//   font-style: normal
+//   src: font-url('FONT_NAME.eot')
+//   src: font-url('FONT_NAME.eot?#iefix') format("embedded-opentype"), font-url('FONT_NAME.svg#FONT_NAME') format("svg"), font-url('FONT_NAME.woff') format("woff"), font-url('FONT_NAME.ttf') format("truetype")
+
+// base definitions...
+
+$base-font-family:     $droid-sans       !default
+$base-font-size-alt:   1em               !default
+$base-line-height-alt: 1.4               !default
+$base-font-color:      #444              !default
+
+// font family...
+
+$font-family-header:   $droid-serif      !default
+$font-family-nav:      $droid-serif      !default
+$font-family-button:   $droid-serif      !default
+
+// non-google web fonts alternativ:
+/ $font-family-header:   $georgia          !default
+/ $font-family-nav:      $georgia          !default
+/ $font-family-button:   $georgia          !default
+
+// icon fonts...
+
+// @font-face
+//   font-family: 'icon-fonts'
+//   font-weight: normal
+//   font-style: normal
+//   src: font-url('icon-fonts.eot')
+//   src: font-url('icon-fonts.eot?#iefix') format("embedded-opentype"), font-url('icon-fonts.svg#icon-fonts') format("svg"), font-url('icon-fonts.woff') format("woff"), font-url('icon-fonts.ttf') format("truetype")
+
+
+/* Colors
+  -----------------------
+
+// color palette...
+
+/* EXAMPLE: https://kuler.adobe.com/#themeID/2291686
+
+$color-1:           #3e454c
+$color-2:           #2185c5
+$color-3:           #7ecefd
+$color-4:           #fff6e5
+$color-5:           #ff7f66
+
+// backgrounds...
+
+$bg-body:           #fff
+$bg-container:      #fff
+$bg-header:         #fff
+$bg-nav:            #fff
+$bg-footer:         #fff
+
+// fonts...
+
+$font-white:        #fff
+$font-gray:         #999
+$font-black:        #000
+
+// color palette alternative:
+// $base-font-color:   lighten($color-1, 10)  !default
+// $font-white:        #fff
+// $font-gray:         lighten($color-1, 40)
+
+// links...
+
+$color-logo:        darken($color-2, 10)
+$color-nav:         darken($color-2, 10)
+
+$link-normal:       darken($color-2, 10)
+$link-hover:        lighten($color-2, 10)
+$link-active:       darken($color-2, 10)
+$link-visited:      darken($color-2, 10)
+$link-focus:        darken($color-2, 10)
+
+// common alternative:
+// $link-normal:       #0645ad
+// $link-hover:        #3366bb
+// $link-active:       #669934
+// $link-visited:      #7f007f
+// $link-focus:        #669934
+
+// buttons...
+
+$color-button:      $font-gray
+$color-button-font: $font-white
+
+// miscellaneous...
+
+$color-highlight:   #00b5f1
+$color-hr:          #c3c3c3
+
+// alerts...
+
+$info-lgt:          #eaeff5
+$info-drk:          #33689a
+$success-lgt:       #f4f7f0
+$success-drk:       #669934
+$warning-lgt:       #ffffd9
+$warning-drk:       #cc682a
+$error-lgt:         #f9eae5
+$error-drk:         #cf3303
+
+// KEY: 1. lgt-blu, 2. drk-blu, 3. lgt-grn, 4. drk-grn,
+//      5. lgt-ylo, 6. drk-orj, 7. lgt-red, 8. drk-red

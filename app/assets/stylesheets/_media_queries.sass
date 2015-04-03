@@ -1,0 +1,44 @@
+// em's calculated from: 130, 240, 320, 768, 1200, 1400 / 16
+
+@mixin breakpoint($point)
+  @if $point == xxs
+    @media (max-width: 8.125em)
+      @content
+
+  @else if $point == xs
+    @media (min-width: 15em)
+      @content
+
+  @else if $point == s
+    @media (min-width: 20em)
+      @content
+
+  @else if $point == m
+    @media (min-width: 48em)
+      @content
+
+  @else if $point == l
+    @media (min-width: 75em)
+      @content
+
+  @else if $point == xl
+    @media (min-width: 87.5em)
+      @content
+
+  @else if $point == retina
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+      @content
+
+// Tests...
+// @include breakpoint(xxs)
+//   background-color: red
+// @include breakpoint(xs)
+//   background-color: green
+// @include breakpoint(s)
+//   background-color: blue
+// @include breakpoint(m)
+//   background-color: gray
+// @include breakpoint(l)
+//   background-color: yellow
+// @include breakpoint(xl)
+//   background-color: orange
