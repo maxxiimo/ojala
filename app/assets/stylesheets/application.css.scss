@@ -7,13 +7,12 @@
 /* MIXINS
   ============================================================================ */
 @import "compass";
-// @import "media_queries";
 @import "mixins";
 
 
 /* RESETS
   ============================================================================ */
-@import "boilerplate/h5bp_normalize_v301";
+@import "boilerplate/h5bp_normalize_v302";
 
 // To counter normalize indentation of lists, and reposition bullets and numbers.
 ol, ul {
