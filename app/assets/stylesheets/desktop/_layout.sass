@@ -18,13 +18,20 @@ html
   -webkit-font-smoothing: antialiased
 
 body
-  margin: 0 auto
-  width: 960px
   background-color: $bg-body
+  &:after
+    +rwd-marker
 
+.container
+  +container()
+  padding-left: 10px
+  padding-right: 10px
 
-*, *:before, *:after
-  +box-sizing(border-box)
+  +breakpoint($tablet)
+    +show-grid(9)
+
+  +breakpoint($desktop)
+    +show-grid(16)
 
 
 /* Media

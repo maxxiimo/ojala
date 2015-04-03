@@ -2,11 +2,14 @@
 %html.no-js{lang: 'en'}
   = head
   %body
-    = browsehappy
-    %header{role: 'banner'}
-      = render 'layouts/logo'
-      = render 'layouts/navigation'
-    #main{role: 'main'}
-      = yield
-    = render 'layouts/footer'
+    #wrapper
+      = browsehappy
+      %header{role: 'banner'}
+        .container
+          = render 'layouts/logo'
+          = render 'layouts/navigation'
+      #main{role: 'main'}
+        .container
+          = yield
+      = render 'layouts/footer'
     = scripts
