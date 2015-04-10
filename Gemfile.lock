@@ -42,6 +42,7 @@ GEM
     breakpoint (2.5.0)
       sass (~> 3.3)
       sassy-maps (< 1.0.0)
+    browser (0.8.0)
     builder (3.2.2)
     byebug (3.4.0)
       columnize (~> 0.8)
@@ -202,6 +203,7 @@ PLATFORMS
 
 DEPENDENCIES
   breakpoint
+  browser
   byebug (= 3.4.0)
   coffee-rails (= 4.1.0)
   compass-rails
