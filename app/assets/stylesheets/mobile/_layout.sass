@@ -11,19 +11,21 @@
   -----------------------
 
 html, button, input, select, textarea
+  line-height: $base-line-height-alt
   font-family: $base-font-family
+  font-size: $base-font-size-alt
   color: $base-font-color
 
 body
-  line-height: $base-line-height-alt
-  font-size: $base-font-size-alt
   background-color: $bg-body
+
+.container
+  +container()
+  padding-left: 10px
+  padding-right: 10px
 
 img
   vertical-align: middle
-
-*, *:before, *:after
-  +box-sizing(border-box)
 
 
 /* Header
