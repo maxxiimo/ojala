@@ -5,10 +5,22 @@ class ApplicationController < ActionController::Base
 
   before_action :detect_device_variant
 
+
+
   private
     def detect_device_variant
-      request.variant = :phone if browser.mobile?
       request.variant = :tablet if browser.tablet?
-      # request.variant = :desktop if !browser.mobile? && !browser.tablet?
+      request.variant = :desktop if !browser.mobile? && !browser.tablet?
+    end
+
+    def set_layout
+      case request.variant
+      when browser.tablet?
+        "tablet"
+      when !browser.mobile? && !browser.tablet?
+        "desktop"
+      else
+        "application"
+      end
     end
 end

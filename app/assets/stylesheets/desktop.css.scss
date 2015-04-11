@@ -11,7 +11,7 @@
 
 /* RESETS
   ============================================================================ */
-@import "boilerplate/mobile_normalize_v301";
+@import "boilerplate/h5bp_normalize_v302";
 
 // To counter normalize indentation of lists, and reposition bullets and numbers.
 ol, ul {
@@ -27,50 +27,56 @@ ol, ul {
 
 $susy: (
   columns: 6,
-  container: 660px,
+  container: 1160px,
   global-box-sizing: border-box,
-  // debug: (
-  //   image: show,
-  //   color: rgba(#66b3dc, 0.25),
-  //   output: overlay,
-  //   toggle: bottom right
-  //   )
+  debug: (
+    image: show,
+    color: rgba(#66b3dc, 0.25),
+    output: overlay,
+    toggle: bottom right
+    )
   );
 
 @include border-box-sizing;
 
-@import "mobile/layout";
+// breakpoints...
+
+$tablet:  660px;
+$desktop: 980px;
+
+@import "desktop/layout";
 
 
 /* TYPOGRAPHY
   ============================================================================ */
-@import "mobile/typography";
+@import "desktop/typography";
 
 
 /* MISCELLANEOUS
   ============================================================================ */
 @import "misc";
 @import "animations";
+// @import "sprites";
 
 
 /* NAVIGATION
   ============================================================================ */
-@import "mobile/navigation";
+@import "desktop/navigation";
 
 
 /* FORMS
   ============================================================================ */
-@import "mobile/forms";
+@import "desktop/forms";
 
 
 /* PAGES
   ============================================================================ */
-@import "mobile/pages";
+@import "desktop/pages";
 
 
 /* STAGING - new styles belong here !!!DO NOT INTEGRATE!!!
   ============================================================================ */
-@import "mobile/staging";
+@import "desktop/staging";
 
 
 /* APPLICATION - ad hoc code under this line
@@ -80,4 +86,5 @@ $susy: (
 
 /* LAST
   ============================================================================ */
-@import "boilerplate/mobile_helpers";
+@import "boilerplate/h5bp_helpers";
+@import "boilerplate/h5bp_print";

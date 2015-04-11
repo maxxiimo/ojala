@@ -1,10 +1,7 @@
 class PagesController < ApplicationController
+  layout :set_layout
+
   def home
-    respond_to do |format|
-      format.html
-      format.html.phone
-      format.html.tablet
-    end
   end
 
   def about

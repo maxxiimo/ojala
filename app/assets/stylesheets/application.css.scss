@@ -11,7 +11,7 @@
 
 /* RESETS
   ============================================================================ */
-@import "boilerplate/h5bp_normalize_v302";
+@import "boilerplate/mobile_normalize_v301";
 
 // To counter normalize indentation of lists, and reposition bullets and numbers.
 ol, ul {
@@ -27,7 +27,7 @@ ol, ul {
 
 $susy: (
   columns: 6,
-  container: 1160px,
+  container: 660px,
   global-box-sizing: border-box,
   debug: (
     image: show,
@@ -39,44 +39,38 @@ $susy: (
 
 @include border-box-sizing;
 
-// breakpoints...
-
-$tablet:  660px;
-$desktop: 980px;
-
-@import "desktop/layout";
+@import "mobile/layout";
 
 
 /* TYPOGRAPHY
   ============================================================================ */
-@import "desktop/typography";
+@import "mobile/typography";
 
 
 /* MISCELLANEOUS
   ============================================================================ */
 @import "misc";
 @import "animations";
-// @import "sprites";
 
 
 /* NAVIGATION
   ============================================================================ */
-@import "desktop/navigation";
+@import "mobile/navigation";
 
 
 /* FORMS
   ============================================================================ */
-@import "desktop/forms";
+@import "mobile/forms";
 
 
 /* PAGES
   ============================================================================ */
-@import "desktop/pages";
+@import "mobile/pages";
 
 
 /* STAGING - new styles belong here !!!DO NOT INTEGRATE!!!
   ============================================================================ */
-@import "desktop/staging";
+@import "mobile/staging";
 
 
 /* APPLICATION - ad hoc code under this line
@@ -86,5 +80,4 @@ $desktop: 980px;
 
 /* LAST
   ============================================================================ */
-@import "boilerplate/h5bp_helpers";
-@import "boilerplate/h5bp_print";
+@import "boilerplate/mobile_helpers";
