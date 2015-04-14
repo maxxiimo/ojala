@@ -15,9 +15,9 @@ class ApplicationController < ActionController::Base
 
     def set_layout
       case request.variant
-      when browser.tablet?
+      when request.variant = :tablet
         "tablet"
-      when !browser.mobile? && !browser.tablet?
+      when request.variant = :desktop
         "desktop"
       else
         "application"
