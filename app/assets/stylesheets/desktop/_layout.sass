@@ -24,14 +24,12 @@ body
 
 .container
   +container()
-  padding-left: 10px
-  padding-right: 10px
 
   +breakpoint($tablet)
-    +show-grid(9)
+    +show-grid(8)
 
   +breakpoint($desktop)
-    +show-grid(16)
+    +show-grid(12)
 
 
 /* Media
@@ -48,19 +46,24 @@ img
   max-width: 100%
 
 
+/* Top Bar
+  -----------------------
+
+#top-bar
+  border-bottom: 1px solid $color-border
+
+
 /* Header
   -----------------------
 
 // navigation in _navigation.sass
 
 header
-  height: 60px
   margin-bottom: 10px
   background-color: $bg-header
 
 .logo
   float: left
-  margin: 10px 0 0 0
   +link-colors($color-logo, $color-logo, $color-logo, $color-logo, $color-logo)
 
 

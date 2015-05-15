@@ -26,14 +26,15 @@ ol, ul {
 @import "breakpoint";
 
 $susy: (
-  columns: 9,
+  columns: 8,
   container: 980px,
+  gutters: .1,
   global-box-sizing: border-box,
   debug: (
-    image: show,
+    image: show-columns,
     color: rgba(#66b3dc, 0.25),
-    output: overlay,
-    toggle: bottom right
+    // output: overlay,
+    // toggle: bottom right
     )
   );
 

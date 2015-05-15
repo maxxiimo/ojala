@@ -1,7 +1,12 @@
 class PagesController < ApplicationController
   layout :set_layout
 
+  def splash
+    render "pages/mock/splash"
+  end
+
   def home
+    render "pages/mock/home"
   end
 
   def about
