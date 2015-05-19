@@ -1,0 +1,46 @@
+#top_bar
+  %ul#utility
+    %li
+      United States
+      [
+      = link_to 'Change City', mock_home_path
+      ]
+    %li= link_to 'Login', mock_home_path
+    %li= link_to 'Register', mock_home_path
+    %li
+      = link_to 'My Ojala', mock_home_path
+      %ul
+        %li= link_to 'My Publishers', mock_home_path
+        %li= link_to 'Recruitment / CV', mock_home_path
+        %li= link_to 'Buyers', mock_home_path
+        %li= link_to 'Individual sellers', mock_home_path
+        %li= link_to 'Customer Service', mock_home_path
+    %li= link_to 'VIP center', mock_home_path
+    %li= link_to 'Help', mock_home_path
+    %li
+      = link_to 'History', mock_home_path
+      %ul
+        %li No browsing history ...
+    %li= link_to 'Navigation', mock_home_path
+
+#banner_ad
+  1190 x 50
+
+#logo
+  = link_to image_tag('logos/logo.png', alt: 'Ojala logo', width: '181', height: '105'), root_path, title: ''
+
+#tiny_ad
+  150 x 50
+
+#search
+  %span City Search:
+  %input
+  #search_utility
+    %ul
+      %li= link_to 'Buy Tickets', mock_home_path
+      %li= link_to 'Graduation Photos', mock_home_path
+      %li= link_to 'City Dating', mock_home_path
+      %li= link_to 'Renovation Renderings so bluntly', mock_home_path
+#post
+  %button FREE Ads
+  = link_to 'Modify/Delete Information', mock_home_path

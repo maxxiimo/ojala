@@ -1,1 +1,31 @@
-Something something something something
+.location
+  United States
+  [
+  = link_to 'Change City', mock_home_path
+  ]
+
+.login
+  = link_to 'Login', mock_home_path
+  %span |
+  = link_to 'Register', mock_home_path
+
+.my_stuff
+  %ul
+    %li
+      = link_to 'My Ojala', mock_home_path
+      %ul
+        %li= link_to 'My Publishers', mock_home_path
+        %li= link_to 'Recruitment / CV', mock_home_path
+        %li= link_to 'Buyers', mock_home_path
+        %li= link_to 'Individual sellers', mock_home_path
+        %li= link_to 'Customer Service', mock_home_path
+
+    %li= link_to 'VIP center', mock_home_path
+    %li= link_to 'Help', mock_home_path
+
+    %li
+      = link_to 'History', mock_home_path
+      %ul
+        %li No browsing history ...
+
+    %li= link_to 'Navigation', mock_home_path

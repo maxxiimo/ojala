@@ -1,9 +1,18 @@
-/* Main
+/* Top Bar
   -----------------------
 
-nav
-  clear: both
-  margin-top: 10px
+ul#utility
+  +inline-block-list
+  li
+    padding: 0 20px
+    font-family: $font-family-nav
+    +link-colors($color-nav, $color-nav, $color-nav, $color-nav, $color-nav)
+  li:first-child
+    padding-left: 0
+
+
+/* Main
+  -----------------------
 
 ul#nav
   +inline-block-list
