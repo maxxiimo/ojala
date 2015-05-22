@@ -1,27 +1,39 @@
-#top_bar
+#top-bar
+  .location
+    United States
+    [
+    = link_to 'Change City', mock_home_path
+    ]
+
   %ul.menubar
+    %li.menubar-item= link_to 'Login', mock_home_path, class: 'menubar-item-target'
+    %li.menubar-item= link_to 'Register', mock_home_path, class: 'menubar-item-target'
     %li.menubar-item
-      United States
-      [
-      = link_to 'Change City', mock_home_path
-      ]
-    %li= link_to 'Login', mock_home_path
-    %li= link_to 'Register', mock_home_path
-    %li
-      = link_to 'My Ojala', mock_home_path
-      %ul
-        %li= link_to 'My Publishers', mock_home_path
-        %li= link_to 'Recruitment / CV', mock_home_path
-        %li= link_to 'Buyers', mock_home_path
-        %li= link_to 'Individual sellers', mock_home_path
-        %li= link_to 'Customer Service', mock_home_path
-    %li= link_to 'VIP center', mock_home_path
-    %li= link_to 'Help', mock_home_path
-    %li
-      = link_to 'History', mock_home_path
-      %ul
-        %li No browsing history ...
-    %li= link_to 'Navigation', mock_home_path
+      = link_to 'My Ojala', mock_home_path, class: 'menubar-item-target'
+      %i.caret-icon
+      %ul.menu
+        %li.menu-item= link_to 'My Publishers', mock_home_path, class: 'menu-item-target'
+        %li.menu-item= link_to 'Recruitment / CV', mock_home_path, class: 'menu-item-target'
+        %li.menu-item= link_to 'Buyers', mock_home_path, class: 'menu-item-target'
+        %li.menu-item= link_to 'Individual sellers', mock_home_path, class: 'menu-item-target'
+        %li.menu-item= link_to 'Customer Service', mock_home_path, class: 'menu-item-target'
+    %li.menubar-item= link_to 'VIP center', mock_home_path, class: 'menubar-item-target'
+    %li.menubar-item= link_to 'Help', mock_home_path, class: 'menubar-item-target'
+    %li.menubar-item
+      = link_to 'History', mock_home_path, class: 'menubar-item-target'
+      %ul.menu
+        %li.menu-item
+          .menu-item-target No browsing history ...
+    -# %li.menubar-item= link_to 'Navigation', mock_home_path, class: 'menubar-item-target'
+    %li.menubar-item
+      .menubar-item-target
+        .menu-icon
+      %ul.menu
+        %li.menu-item= link_to 'Something', mock_home_path, class: 'menu-item-target'
+        %li.menu-item= link_to 'Something', mock_home_path, class: 'menu-item-target'
+        %li.menu-item= link_to 'Something', mock_home_path, class: 'menu-item-target'
+        %li.menu-item= link_to 'Something', mock_home_path, class: 'menu-item-target'
+        %li.menu-item= link_to 'Something', mock_home_path, class: 'menu-item-target'
 
 #banner-ad
   1190 x 50

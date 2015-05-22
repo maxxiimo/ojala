@@ -1,20 +1,68 @@
 /* Top Bar
   ----------------------- */
 
-ul.menubar
-  // +inline-block-list
-  li
-    padding: 0 10px
-    font-family: $font-family-nav
-    +link-colors($color-nav, $color-nav, $color-nav, $color-nav, $color-nav)
-  li:first-child
-    padding-left: 0
+.menubar
+  margin: 0
+  text-align: right
+
+.menubar-item
+  display: inline-block
+  position: relative
+
+.menubar-item-target
+  display: inline-block
+  padding: 0 10px
+  white-space: nowrap
+
+  &:hover, .is-selected &
+
+.menu
+  display: none
+  position: absolute
+  top: 100%
+  width: 15em
+  list-style: none
+  text-align: left
+
+  .is-selected &
+    display: block
+
+.menu-item-target
+  display: block
+  margin: 10px 0
+  padding-left: 10px
+  text-decoration: none
+
+  // &:hover
+
+.caret-icon
+  display: inline-block
+  position: relative
+  left: -10px
+  width: 0
+  height: 0
+  // margin-bottom: 2px
+  vertical-align: middle
+  color: inherit
+  border-top: 5px solid
+  border-right: 5px solid transparent
+  border-left: 5px solid transparent
+  overflow: hidden /* for IE6 */
+
+.menu-icon
+  display: block
+  width: 20px
+  height: 20px
+  // background: center center no-repeat lighten($gray, 30)
+  // background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADhJREFUeNpi/P//PwOtARMDHQBdLGFBYtMq3BiHT3DRPU4YR4NrNAmPJuHRJDyahEeT8Ii3BCDAAF0WBj5Er5idAAAAAElFTkSuQmCC)
+  background: center center no-repeat transparent
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAASCAYAAABfJS4tAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAKZJREFUeNq0lL0KAjEQhHfXCCEI/uAV2uX9n8VWtLC2EU9BhHDkzglc4QPMDnxJqikms6sicgZ7MApHBh4BxwFshKtlc1fhS0OM8YbHDkwsU/DUrutWcy5M4zGUUj4OUUiotR5xL8i+Vc3siseWbNy3PHqHur1s/ji2rNXt4hJFzjm51A2t+HrVzWVANKV0chnpVg2wJifxZkbwr6nt4zsY2Iv+J8AAgxgsKqUuTZoAAAAASUVORK5CYII=)
 
 
 /* Main
   ----------------------- */
 
-ul#nav
+#nav
   +inline-block-list
   li
     padding: 0 20px

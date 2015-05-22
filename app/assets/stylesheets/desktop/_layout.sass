@@ -6,7 +6,7 @@
 
 
 /* Base
-  -----------------------
+  ----------------------- */
 
 html
   line-height: $base-line-height-alt
@@ -33,7 +33,7 @@ body
 
 
 /* Media
-  -----------------------
+  ----------------------- */
 
 audio,
 canvas,
@@ -47,18 +47,26 @@ img
 
 
 /* Header
-  -----------------------
+  ----------------------- */
 
-// #utility and  #nav in _navigation.sass
+// .menubar and  #nav in _navigation.sass
 
 header
   margin-bottom: 10px
   background-color: $bg-header
 
 #top-bar
+  padding-top: 5px
   border-bottom: 1px solid $color-border
 
+.location
+  +span(3 of 12)
+
+.menubar
+  +span(9 of 12 last)
+
 #banner-ad
+  clear: both
   height: 50px
 
 #logo
@@ -75,7 +83,7 @@ nav
 
 
 /* Footer
-  -----------------------
+  ----------------------- */
 
 footer
   height: 100px
