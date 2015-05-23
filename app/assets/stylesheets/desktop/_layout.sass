@@ -49,37 +49,56 @@ img
 /* Header
   ----------------------- */
 
-// .menubar and  #nav in _navigation.sass
-
 header
   margin-bottom: 10px
   background-color: $bg-header
 
+// top bar level
+
 #top-bar
-  padding-top: 5px
+  height: 30px
+  margin-top: 5px
+  padding-bottom: 5px
   border-bottom: 1px solid $color-border
 
 .location
   +span(3 of 12)
 
 .menubar
+  /* bulk of .menubar in _navigation.sass */
   +span(9 of 12 last)
 
+// banner advertisement level
+
 #banner-ad
-  clear: both
   height: 50px
 
-#logo
-  float: left
-  +link-colors($color-logo, $color-logo, $color-logo, $color-logo, $color-logo)
+// banner level
 
-#tiny-ad
+#banner
+  margin-top: 10px
+  +clearfix
 
-#search
+.logo
+  +span(2 of 12)
+
+.micro-ad
+  +span(2 of 12)
+
+.search
+  +span(6 of 12)
+
+.post
+  +span(2 of 12 last)
+
+// navigation level
 
 nav
+  /* .tabs in _navigation.sass */
   clear: both
   margin-top: 10px
+  border-top: 1px solid $color-border
+  border-bottom: 4px solid $orange
 
 
 /* Footer

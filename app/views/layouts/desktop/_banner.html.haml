@@ -2,7 +2,7 @@
   .location
     United States
     [
-    = link_to 'Change City', mock_home_path
+    = link_to 'Change', mock_home_path
     ]
 
   %ul.menubar
@@ -36,23 +36,23 @@
         %li.menu-item= link_to 'Something', mock_home_path, class: 'menu-item-target'
 
 #banner-ad
-  1190 x 50
+  %img{:src => 'http://placehold.it/1190x50', :alt => 'Advertisement', :width => '1190', :height => '50'}
 
-#logo
-  = link_to image_tag('logos/logo.png', alt: 'Ojala logo', width: '181', height: '105'), root_path, title: ''
+#banner
+  .logo
+    = link_to image_tag('logos/130x60.gif', alt: 'Ojala logo', width: '130', height: '60'), root_path, title: ''
 
-#tiny-ad
-  150 x 50
+  .micro-ad
+    %img{:src => 'http://placehold.it/150x50', :alt => 'Advertisement', :width => '150', :height => '50'}
 
-#search
-  %span City Search:
-  %input
-  #search-utility
+  .search
+    %span City Search:
+    %input
     %ul
       %li= link_to 'Buy Tickets', mock_home_path
       %li= link_to 'Graduation Photos', mock_home_path
       %li= link_to 'City Dating', mock_home_path
       %li= link_to 'Renovation Renderings so bluntly', mock_home_path
-#post
-  %button FREE Ads
-  = link_to 'Modify/Delete Information', mock_home_path
+  .post
+    %button FREE Ads
+    = link_to 'Modify/Delete Information', mock_home_path
