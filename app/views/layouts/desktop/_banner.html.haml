@@ -46,8 +46,12 @@
     %img{:src => 'http://placehold.it/150x50', :alt => 'Advertisement', :width => '150', :height => '50'}
 
   .search
-    %span City Search:
-    %input
+    %form
+      = form_tag do
+        .search-input
+          = text_field_tag 'Search'
+        .search-button
+          = submit_tag 'City Search'
     %ul
       %li= link_to 'Buy Tickets', mock_home_path
       %li= link_to 'Graduation Photos', mock_home_path

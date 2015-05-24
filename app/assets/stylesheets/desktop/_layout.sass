@@ -19,8 +19,8 @@ html
 
 body
   background-color: $bg-body
-  &:after
-    +rwd-marker
+  // &:after
+  //   +rwd-marker
 
 .container
   +container()
@@ -53,27 +53,27 @@ header
   margin-bottom: 10px
   background-color: $bg-header
 
-// top bar level
+// top bar...
 
 #top-bar
   height: 30px
   margin-top: 5px
   padding-bottom: 5px
-  border-bottom: 1px solid $color-border
+  border-bottom: 1px solid $border
 
 .location
   +span(3 of 12)
 
 .menubar
-  /* bulk of .menubar in _navigation.sass */
   +span(9 of 12 last)
+  /* bulk of .menubar in _navigation.sass */
 
-// banner advertisement level
+// banner advertisement...
 
 #banner-ad
   height: 50px
 
-// banner level
+// main banner area...
 
 #banner
   margin-top: 10px
@@ -88,17 +88,61 @@ header
 .search
   +span(6 of 12)
 
+.search-input
+  float: left
+  height: 30px
+  padding-left: 8px
+  border: 2px solid $orange
+  border-right-width: 0
+  overflow: hidden
+  input
+    // display: inline-block
+    // float: left
+    width: 450px
+    height: 22px
+    line-height: 22px
+    padding: 4px 2px 4px 0
+    font-size: 14px
+    border: 0
+    // background: 0 0
+    // overflow: hidden
+
+.search-button
+  float: left
+  height: 34px
+  input
+    // float: left
+    height: 34px
+    line-height: 34px
+    margin: 0
+    padding: 0 20px
+    font-size: 14px
+    // font-weight: 700
+    color: $font-white
+    text-align: center
+    background-color: $rich-blue
+    border: 0
+    cursor: pointer
+    // overflow: hidden
+
+.search-button input:hover
+  color: #207cca
+  background-color: #fafafa
+
+.search ul
+  clear: both
+
 .post
   +span(2 of 12 last)
 
-// navigation level
+// tabs...
 
 nav
-  /* .tabs in _navigation.sass */
   clear: both
   margin-top: 10px
-  border-top: 1px solid $color-border
+  border-top: 1px solid $border
   border-bottom: 4px solid $orange
+  /* .tabs in _navigation.sass */
 
 
 /* Footer
