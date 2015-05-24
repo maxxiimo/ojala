@@ -26,9 +26,10 @@ ol, ul {
 @import "breakpoint";
 
 $susy: (
-  columns: 4,
-  container: 1190px,
-  gutters: .1,
+  columns: 16,
+  column-width: 65px,
+  gutters: 10px / 65px,
+  math: static,
   global-box-sizing: border-box,
   debug: (
     image: show-columns,
@@ -39,11 +40,6 @@ $susy: (
   );
 
 @include border-box-sizing;
-
-// breakpoints...
-
-$tablet:  660px;
-$desktop: 980px;
 
 @import "desktop/layout";
 
