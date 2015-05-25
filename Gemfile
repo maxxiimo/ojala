@@ -13,6 +13,7 @@ gem 'sdoc',                 '0.4.0', group: :doc
 gem 'pg',                   '0.18.1'
 gem 'haml-rails'
 gem 'browser'
+gem 'goose'
 
 # Compass specific gems.
 gem 'compass-rails'
