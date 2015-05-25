@@ -6,6 +6,7 @@
       = render 'layouts/desktop/browsehappy'
       %header{role: 'banner'}
         .container
+          = render 'layouts/desktop/top_bar'
           = render 'layouts/desktop/banner'
           = yield :tab_navigation
       #main{role: 'main'}

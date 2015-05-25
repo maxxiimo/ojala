@@ -1,15 +1,14 @@
 !!!
 %html.no-js{lang: 'en'}
-  = render 'layouts/desktop/head'
+  = render 'layouts/phone/head'
   %body
     #wrapper
-      = render 'layouts/desktop/browsehappy'
       %header{role: 'banner'}
         .container
-          = render 'layouts/desktop/splash_banner'
+          = render 'layouts/phone/logo'
       #main{role: 'main'}
         .container
-          %p PHONE Splash splash splash
+          %p Phone phone phone SPLASH
           = yield
-      = render 'layouts/desktop/footer'
-    = render 'layouts/desktop/scripts'
+      = render 'layouts/phone/footer'
+    = render 'layouts/phone/scripts'
