@@ -7,7 +7,7 @@
       %header{role: 'banner'}
         .container
           = render 'layouts/desktop/banner'
-          = render 'layouts/desktop/navigation'
+          = yield :tab_navigation
       #main{role: 'main'}
         .container
           = yield

@@ -1,0 +1,14 @@
+- content_for :tab_navigation do
+  %nav{role: "navigation"}
+    %ul.tabs
+      =nav_to 'Home', mock_home_path
+      =nav_to 'Jobs', mock_home_path
+      =nav_to 'Rentals', mock_home_path
+      =nav_to 'Housing', mock_home_path
+      =nav_to 'Used Car', mock_home_path
+      =nav_to 'New Car', mock_home_path
+      =nav_to 'Pets', mock_home_path
+      =nav_to 'For Sale', mock_home_path
+      =nav_to 'Local Services', mock_home_path
+      =nav_to 'Help', mock_home_path, class: 'right'
+      =nav_to 'Join', mock_home_path, class: 'right'
