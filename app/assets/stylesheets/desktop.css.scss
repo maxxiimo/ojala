@@ -8,6 +8,11 @@
 @import "compass";
 @import "mixins";
 
+// See https://github.com/ericam/susy/issues/425 for an explanation of the following:
+@mixin box-sizing($box-model: $default-box-sizing) {
+  @include prefixed-properties(css3-boxsizing, $box-sizing-support-threshold, (box-sizing: $box-model));
+}
+
 
 /* RESETS
   ============================================================================ */
@@ -16,7 +21,7 @@
 // To counter normalize indentation of lists, and reposition bullets and numbers.
 ol, ul {
   padding-left: 0;
-  list-style-position: inside
+  list-style-position: inside;
 }
 
 
