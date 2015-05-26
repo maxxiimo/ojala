@@ -9,55 +9,19 @@ textarea
   resize: vertical
 
 
-/* Search
-  ----------------------- */
-
-.search-input
-  float: left
-  width: span(7)
-  height: 38px
-  padding: 4px 2px 4px 8px
-  border: 2px solid $orange
-  border-right-width: 0
-  overflow: hidden
-  input
-    width: 100%
-    height: 26px
-    line-height: 26px
-    border: 0
-
-.search-button
-  float: left
-  height: 38px
-  input
-    height: 38px
-    line-height: 38px
-    margin: 0
-    padding: 0 20px
-    font-family: $font-family-button
-    font-weight: 700
-    color: $font-white
-    text-align: center
-    background-color: $orange
-    border: 0
-    cursor: pointer
-
-.search-button input:hover
-  background-color: lighten($orange, 5)
-
-
 /* Buttons
   ----------------------- */
 
-button, .button
+button, .button, .search-button
   font-family: $font-family-button
+  font-size: 14px
+  font-weight: 700
 
 .button
   display: inline-block
   height: 38px
   line-height: 38px
   padding: 0 20px
-  font-weight: 700
   text-align: center
 
 .btn-orange
@@ -87,6 +51,41 @@ button, .button
   &:hover
     color: $font-white
     background-color: lighten($rich-blue, 5)
+
+
+/* Search
+  ----------------------- */
+
+.search-input
+  float: left
+  width: span(7)
+  height: 38px
+  padding: 4px 2px 4px 8px
+  border: 2px solid $orange
+  border-right-width: 0
+  overflow: hidden
+  input
+    width: 100%
+    height: 26px
+    line-height: 26px
+    border: 0
+
+.search-button
+  float: left
+  height: 38px
+  input
+    height: 38px
+    line-height: 38px
+    margin: 0
+    padding: 0 20px
+    color: $font-white
+    text-align: center
+    background-color: $orange
+    border: 0
+    cursor: pointer
+
+.search-button input:hover
+  background-color: lighten($orange, 5)
 
 
 /* Form
