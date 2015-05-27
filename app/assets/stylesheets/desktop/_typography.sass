@@ -19,6 +19,9 @@ a
   &:hover
     text-decoration: underline
 
+a.red
+  +link-colors($link-red, $link-red, $link-red, $link-red, $link-red)
+
 
 /* Headers
   ----------------------- */
@@ -31,6 +34,7 @@ h2, h3
   a
     display: inline-block
     // color: #292929
+    +link-colors($link-black, $link-black, $link-black, $link-black, $link-black)
   span a
     margin-left: 15px
     font-size: 12px
