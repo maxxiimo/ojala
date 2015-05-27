@@ -26,14 +26,14 @@ button, .button, .search-button
 
 .btn-orange
   background-color: $orange
-  +link-colors($font-white, $font-white, $font-white, $font-white, $font-white)
+    +link-colors($link-white, $link-white, $link-white, $link-white, $link-white)
 
   &:hover
     background-color: lighten($orange, 5)
 
 .btn-blue
   background-color: $rich-blue
-  +link-colors($font-white, $font-white, $font-white, $font-white, $font-white)
+    +link-colors($link-white, $link-white, $link-white, $link-white, $link-white)
 
   &:hover
     background-color: lighten($rich-blue, 5)
@@ -42,14 +42,14 @@ button, .button, .search-button
   border: 1px solid $orange
 
   &:hover
-    color: $font-white
+    color: $link-white
     background-color: lighten($orange, 5)
 
 .btn-blue-ol
   border: 1px solid $rich-blue
 
   &:hover
-    color: $font-white
+    color: $link-white
     background-color: lighten($rich-blue, 5)
 
 
@@ -78,7 +78,7 @@ button, .button, .search-button
     line-height: 38px
     margin: 0
     padding: 0 20px
-    color: $font-white
+    color: $link-white
     text-align: center
     background-color: $orange
     border: 0
