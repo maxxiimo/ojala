@@ -14,6 +14,7 @@ gem 'pg',                   '0.18.1'
 gem 'haml-rails'
 gem 'browser'
 gem 'goose'
+gem 'devise'
 
 # Compass specific gems.
 gem 'compass-rails'
