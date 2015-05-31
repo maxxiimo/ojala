@@ -11,6 +11,9 @@
           = yield :tab_navigation
       #main{role: 'main'}
         .container
+          - flash.each do |key, value|
+            %div{class: "#{key}"}
+              = value
           = yield
       = render 'layouts/desktop/footer'
     = render 'layouts/desktop/scripts'
