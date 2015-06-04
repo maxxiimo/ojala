@@ -15,6 +15,7 @@ gem 'haml-rails'
 gem 'browser'
 gem 'goose'
 gem 'devise'
+gem 'figaro'
 
 # Compass specific gems.
 gem 'compass-rails'

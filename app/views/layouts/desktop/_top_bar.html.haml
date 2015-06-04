@@ -1,4 +1,4 @@
-#top-bar
+#top-bar.clearfix
   .location
     United States
     [
@@ -6,12 +6,17 @@
     ]
 
   %ul.menubar
-    %li.menubar-item= link_to 'Login', mock_home_path, class: 'menubar-item-target'
-    %li.menubar-item= link_to 'Register', mock_home_path, class: 'menubar-item-target'
+    - if user_signed_in?
+      %li.menubar-item= link_to current_user.username, edit_user_registration_path, class: 'menubar-item-target'
+      %li.menubar-item= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'menubar-item-target'
+    - else
+      %li.menubar-item= link_to 'Login', new_user_session_path, class: 'menubar-item-target'
+      %li.menubar-item= link_to 'Register', new_user_registration_path, class: 'menubar-item-target'
     %li.menubar-item
       = link_to 'My Ojala', mock_home_path, class: 'menubar-item-target'
       %i.caret-icon
       %ul.menu
+        %li.menu-item= link_to 'Profile', edit_user_registration_path, class: 'menubar-item-target'
         %li.menu-item= link_to 'My Publishers', mock_home_path, class: 'menu-item-target'
         %li.menu-item= link_to 'Recruitment / CV', mock_home_path, class: 'menu-item-target'
         %li.menu-item= link_to 'Buyers', mock_home_path, class: 'menu-item-target'

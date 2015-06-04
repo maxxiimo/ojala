@@ -4,10 +4,22 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :detect_device_variant
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
 
 
-private
+
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) << :username
+    # devise_parameter_sanitizer.for(:sign_in) << :username
+    devise_parameter_sanitizer.for(:account_update) << :username
+  end
+
+  private
+
   def detect_device_variant
     request.variant = :tablet if browser.tablet?
     request.variant = :desktop if !browser.mobile? && !browser.tablet?
