@@ -42,7 +42,7 @@ Rails.application.configure do
   # Default URL options for the Devise mailer. To properly generate links inside email views.
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
-  # For Devise.
+  # Email delivery.
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
