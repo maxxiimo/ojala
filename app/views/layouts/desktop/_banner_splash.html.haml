@@ -1,0 +1,13 @@
+#banner-ad
+  %img{:src => 'http://placehold.it/1190x50', :alt => 'Advertisement', :width => '1190', :height => '50'}
+
+#banner
+  .logo
+    = link_to image_tag('logos/130x60.gif', alt: 'Ojala logo', width: '130', height: '60'), root_path, title: ''
+  .search
+    %form
+      = form_tag do
+        .search-input
+          = text_field_tag 'Search'
+        .search-button
+          = submit_tag 'City Search'
