@@ -1,0 +1,18 @@
+!!!
+%html.no-js{lang: 'en'}
+  = render 'layouts/desktop/head'
+  %body
+    #wrapper
+      = render 'layouts/desktop/browsehappy'
+      %header{role: 'banner'}
+        .container
+          = render 'layouts/desktop/top_bar'
+          = render 'layouts/desktop/banner_simple'
+      #main{role: 'main'}
+        .container
+          - flash.each do |key, value|
+            %div{class: "#{key}"}
+              = value
+          = yield
+      = render 'layouts/desktop/footer'
+    = render 'layouts/desktop/scripts'
