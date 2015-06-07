@@ -1,0 +1,24 @@
+#banner
+  .logo
+    = link_to image_tag('logos/130x60.gif', alt: 'Ojala logo', width: '130', height: '60'), root_path, title: 'Link to Ojala Homepage'
+
+  .micro-ad
+    %img{:src => 'http://placehold.it/150x50', :alt => 'Advertisement', :width => '150', :height => '50'}
+
+  .search
+    %form
+      = form_tag do
+        .search-input
+          = text_field_tag 'Search'
+        .search-button
+          = submit_tag 'Search'
+    %ul.search-nav
+      %li= link_to 'Buy Tickets', mock_home_path
+      %li= link_to 'Horoscope', mock_home_path
+      %li= link_to 'City Dating', mock_home_path
+      %li= link_to 'Relevant', mock_home_path
+      %li= link_to 'Pertinent', mock_home_path
+      %li= link_to 'Current', mock_home_path
+  .post
+    = link_to 'Post FREE Ads', mock_home_path, class: 'button btn-blue'
+    = link_to 'Modify/Delete', mock_home_path
