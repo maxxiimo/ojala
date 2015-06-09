@@ -17,6 +17,7 @@ gem 'goose'
 gem 'devise'
 gem 'figaro'
 gem 'puma'
+gem 'delayed_job_active_record'
 
 # Compass specific gems.
 gem 'compass-rails'
