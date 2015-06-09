@@ -91,7 +91,28 @@ button, .button, .search-button
 /* Form
   ----------------------- */
 
+.form
+  legend
+    display: none
+  ol
+    list-style: none
+  li
+    margin-bottom: 10px
+.form-field
+  input, textarea
+    padding: 5px
+    font-size: 16px
+.form-checkbox input
+  +transform(scale(1.5))
 
+.form-register,
+.form-login,
+.form-resend-conf,
+.form-resend-unlock,
+.form-forgot-pwd,
+.form-change-pwd
+  +span(5)
+  +pre(6)
 
 /* Alerts
   ----------------------- */

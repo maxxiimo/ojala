@@ -1,0 +1,16 @@
+- content_for :title do
+  Confirmation Email
+
+.form-resend-conf
+  %h2 Didn't receive confirmation instructions?
+  = form_for resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post, role: 'form', class: 'form' } do |f|
+    = devise_error_messages!
+    %fieldset
+      %legend Confirmation Email
+      %ol
+        %li
+          .form-label= f.label :email
+          .form-field= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email)
+        %li
+          .form-button= f.submit "Resend"
+  = render "devise/shared/links"
