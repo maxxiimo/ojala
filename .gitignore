@@ -108,8 +108,7 @@ bin/
 scratch.*
 *.TODO
 graveyard.sass
-public/source
-vendor/source
+source
 local_env.yml
 
 # Ignore application configuration
