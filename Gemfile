@@ -16,6 +16,7 @@ gem 'browser'
 gem 'goose'
 gem 'devise'
 gem 'figaro'
+gem 'puma'
 
 # Compass specific gems.
 gem 'compass-rails'
@@ -39,6 +40,5 @@ group :test do
 end
 
 group :production do
-  # gem 'pg',                 '0.18.1'
   gem 'rails_12factor',     '0.0.2'
 end
