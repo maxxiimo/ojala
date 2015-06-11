@@ -27,15 +27,16 @@ gem 'breakpoint'
 
 group :development, :test do
   gem 'spring',             '1.1.3'
+
   # Performance.
   # gem 'rack-mini-profiler'
   # gem 'flamegraph'
+
   # Debugging.
   gem 'byebug',             '3.4.0'
   gem 'web-console',        '2.0.0.beta3'
-end
 
-group :test do
+  # Testing Framework.
   gem 'rspec-rails',        '3.2.1'
   gem 'factory_girl_rails', '4.5.0'
   gem 'database_cleaner',   '1.4.1'
