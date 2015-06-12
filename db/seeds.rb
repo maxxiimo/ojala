@@ -1,47 +1,35 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# Load users
 
-categories = Category.create([
-  { name: 'Automotive Services' },
-  # { name: 'Maintenance' },
-  { name: 'Beauty' },
-  { name: 'Business' },
-  { name: 'Dating' },
-  { name: 'Dining' },
-  { name: 'Education and Training' },
-  { name: 'Farming / Livestock' },
-  { name: 'For Sale' },
-  # { name: 'Digital • Mobile • Electronic' },
-  # { name: 'Furniture • Appliances' },
-  # { name: 'Vehicle • Cycle • Marine' },
-  # { name: 'Department Store • General' },
-  # { name: 'Office Equipment' },
-  { name: 'Healthcare' },
-  { name: 'Top Industries' },
-  { name: 'Jobs' },
-  { name: 'Local Services' },
-  { name: 'Meet Up' },
-  { name: 'New Cars' },
-  { name: 'Part-time Jobs' },
-  { name: 'Pets / Pet Products' },
-  { name: 'Real Estate' },
-  { name: 'Recreation' },
-  { name: 'Resumes' },
-  { name: 'Ticketing' },
-  { name: 'Tourism' },
-  { name: 'Used Cars' }
-  # { name: 'By Brand' },
-  # { name: 'Manufacturer Certified Pre-Owned' }
+# NOTE ccm: .skip_confirmation! not working, unsuccessfully tried various fixes based on:
+# http://stackoverflow.com/questions/8672189/devise-skip-confirmation-not-working
+# https://groups.google.com/forum/#!topic/plataformatec-devise/5cVP6Voxk6s
+
+user = User.create!([
+  { username: 'Test 1', email: 'test1@ojala.com', password: 'password', password_confirmation: 'password' },
+  { username: 'Test 2', email: 'test2@ojala.com', password: 'password', password_confirmation: 'password' },
+  { username: 'Test 3', email: 'test3@ojala.com', password: 'password', password_confirmation: 'password' }
 ])
+# user.skip_confirmation!
+# user.confirm!
+user.save!
 
-# categories_data = YAML.load_file(Rails.root.join('db/seeds/categories.yml'))
+# NOTE ccm: This configuration will result in:
+# ArgumentError: When assigning attributes, you must pass a hash as an argument.
 
-# categories_data.each do |category|
-#   category = Category.find_or_create_by(name, category['name'])
-#   game.save
-# end
+# user = User.new([
+#   { username: 'Test 1', email: 'test1@ojala.com', password: 'password', password_confirmation: 'password' },
+#   { username: 'Test 2', email: 'test2@ojala.com', password: 'password', password_confirmation: 'password' },
+#   { username: 'Test 3', email: 'test3@ojala.com', password: 'password', password_confirmation: 'password' }
+# ])
+# user.skip_confirmation!
+# # user.confirm!
+# user.create
+
+# Load categories
+
+categories_data = YAML.load_file(Rails.root.join('db/seeds/categories.yml'))
+
+categories_data.each do |c|
+  category = Category.find_or_create_by(name: c['name'])
+  category.save
+end
