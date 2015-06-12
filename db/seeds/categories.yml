@@ -1,0 +1,31 @@
+---
+  - name: Automotive Services
+  # - name: Maintenance
+  - name: Beauty
+  - name: Business
+  - name: Dating
+  - name: Dining
+  - name: Education and Training
+  - name: Farming / Livestock
+  - name: For Sale
+  # - name: Digital • Mobile • Electronic
+  # - name: Furniture • Appliances
+  # - name: Vehicle • Cycle • Marine
+  # - name: Department Store • General
+  # - name: Office Equipment
+  - name: Healthcare
+  - name: Top Industries
+  - name: Jobs
+  - name: Local Services
+  - name: Meet Up
+  - name: New Cars
+  - name: Part-time Jobs
+  - name: Pets / Pet Products
+  - name: Real Estate
+  - name: Recreation
+  - name: Resumes
+  - name: Ticketing
+  - name: Tourism
+  - name: Used Cars
+  # - name: By Brand
+  # - name: Manufacturer Certified Pre-Owned
