@@ -9,6 +9,7 @@ user = User.create!([
   { username: 'Test 2', email: 'test2@ojala.com', password: 'password', password_confirmation: 'password' },
   { username: 'Test 3', email: 'test3@ojala.com', password: 'password', password_confirmation: 'password' }
 ])
+# FIXME ccm: This needs to work.
 # user.skip_confirmation!
 # user.confirm!
 user.save!
