@@ -1,0 +1,551 @@
+Automotive Services
+  - name: carpool
+  - name: ride wanted
+
+  - name: i\'m going / will drive
+  - name: chauffeur
+
+  - name: learn to drive
+  - name: car insurance
+
+Maintenance
+  - name: maintenance
+  - name: decorative / beauty
+
+  - name: modifications
+  - name: protective
+
+  - name: car accessories
+  # other »
+
+
+Beauty
+  - name: spa
+  - name: slimming
+  - name: hair
+  - name: dance
+
+  - name: yoga
+  - name: nails
+  - name: facial
+
+
+Business
+  - name: patent trademark
+  - name: financial accounting
+
+  - name: taxes
+  - name: legal
+
+  - name: consulting
+  - name: freight logistics
+
+  - name: courier insurance
+  - name: freight trains
+
+  - name: site construction
+  - name: network cabling
+
+  - name: advertising media
+  - name: design planning
+
+  - name: packaging
+  - name: printing
+
+  - name: customized gifts
+  - name: exhibition services
+
+  - name: translation
+  - name: lease
+
+  - name: equipment maint
+  - name: building
+
+  - name: mechanical maint
+  - name: business registration
+
+
+Dating
+  - name: strictly platonic
+  - name: casual encounters
+
+  - name: women seek women
+  - name: women seeking men
+
+  - name: men seeking women
+  - name: men seeking men
+
+  - name: misc romance
+  - name: missed connections
+
+
+Dining
+  - name: takeaway
+  - name: catering
+  - name: gourmet
+
+  - name: cake order
+
+
+Education and Training
+  - name: tutoring agency
+  - name: private tutor
+
+  - name: language
+  - name: arts
+
+  - name: vocational
+  - name: sports
+
+  - name: design
+  - name: computer
+
+  - name: classes
+  - name: abroad
+
+  - name: academic institutions
+
+
+Farming / Livestock
+  - name: garden flowers
+  - name: crops
+
+  - name: plant seedlings
+  - name: livestock
+
+  - name: aquatic products
+  - name: feed
+
+  - name: pesticide / fertilizer
+  - name: veterinary
+
+  - name: agent
+  - name: farm mach / equip
+
+  - name: processing of agricultural products
+
+
+For Sale
+  - name: local garage sales#, class: 'red'
+
+  - name: new ipad 6
+  - name: hot product
+
+  # Digital • Mobile • Electronic
+  - name: cell phones
+  - name: samsung
+
+  - name: apple
+  - name: desktop pc
+
+  - name: hardware
+  - name: monitor
+
+  - name: pc peripherals
+  - name: laptop
+
+  - name: macbook
+  - name: lenovo
+
+  - name: tablet
+  - name: ipad
+
+  - name: digital products
+  - name: camera
+
+  - name: dslr
+  - name: game consoles
+
+  # Furniture • Appliances
+  - name: appliances
+  - name: refrigerator
+
+  - name: ac
+  - name: washing mach
+
+  - name: furniture
+  - name: sofa
+
+  - name: bed
+  - name: tables
+
+  # Vehicle • Cycle • Marine
+  - name: motorcycles
+  - name: yamaha
+
+  - name: honda
+  - name: bicycles
+  - name: electric
+  - name: atv / utv / snow
+
+  - name: boats
+  - name: rv / camper
+
+  # Department Store • General
+  - name: clothing
+  - name: kitchen
+
+  - name: fabric
+  - name: bedding
+
+  - name: baby toys
+  - name: children\'s toys
+
+  - name: clothing bags
+  - name: watches
+
+  - name: shoes
+  - name: adult
+
+  - name: beauty care
+  - name: fitness
+
+  - name: tools
+  - name: arts and crafts
+
+  - name: musical instr
+  - name: books
+
+  - name: collectibles
+  - name: general
+
+  - name: wanted
+  - name: FREE
+
+  - name: jewelry
+  - name: materials
+
+  - name: gift cards
+  - name: game trading
+
+  # Office Equipment
+  - name: cds / dvd / vhs
+  - name: equipment
+
+  - name: desk
+  - name: printer
+
+  - name: used equip
+  - name: construct mach
+
+
+Healthcare
+  - name: dermatology
+  - name: gynecology
+  - name: genital warts
+
+  - name: genital herpes
+  - name: cosmetic
+  - name: impotence
+
+  - name: infertility
+  - name: assage
+  - name: premature ejac
+
+
+Top Industries
+  - name: medical / care
+  - name: massage
+  - name: computer / network
+
+  - name: market / media
+  - name: catering
+  - name: pharma / biotech
+
+  - name: electrical
+  - name: electronic
+  - name: advert / exhibit
+
+  - name: depart store
+  - name: supermarket
+  - name: hospitality / tourism
+
+  - name: warehouse
+  - name: logistics
+  - name: finance / banking
+
+  - name: sports / fitness
+  - name: building
+  - name: equip / machinery
+
+  - name: beauty / hair
+  - name: art / design
+  - name: entertain / leisure
+
+  - name: edu / training
+  - name: textile / food
+  - name: automotive services
+
+
+Jobs
+  - name: sales
+  - name: service
+  - name: salesperson
+  - name: clerical
+
+  - name: assistant
+  - name: general labor
+  - name: front desk
+  - name: editor
+
+  - name: electrician
+  - name: cashier
+  - name: accounting
+  - name: makeup
+
+  - name: finance
+  - name: webmaster
+  - name: welder
+  - name: preschool
+
+  - name: mechanic
+  - name: architecture
+  - name: claims
+  - name: engineer
+
+  - name: manager
+  - name: teacher
+  - name: nurse
+  - name: waiter
+
+  - name: doctors
+  - name: cleaning
+  - name: security
+  - name: chef
+
+  - name: translation
+  - name: legal
+  - name: nanny
+  - name: courier
+
+  - name: apprentice
+  - name: guide
+  - name: housekeeper
+  - name: porter
+
+  - name: handyman
+  - name: visa consult
+  - name: real estate
+  - name: part-time
+
+  - name: dishwasher
+  - name: insurance
+  - name: car wash
+  - name: bakers
+
+  - name: admin / ofc
+  - name: logistics
+  - name: photogr
+  - name: delivery
+
+  - name: graphic des
+  - name: hairstylist
+  - name: auto repair
+  - name: web design
+
+  - name: beautician
+  - name: automotive
+  - name: interior des
+  - name: operator
+  - name: driver
+  - name: tallymen
+  - name: property
+  # more »
+
+Local Services
+
+
+
+Meet Up
+  - name: volunteering
+  - name: writing
+  - name: consciousness
+
+  - name: live music
+  - name: fitness
+  - name: language / culture
+
+  - name: women\'s social
+  - name: education
+  - name: technology
+
+  - name: dining out
+  - name: lgbt
+  - name: crafts
+
+  - name: social
+  - name: moms
+  - name: entrepreneurship
+
+
+New Cars
+  - name: hot prices
+  - name: porsche
+
+  - name: highlander
+  - name: volvo
+
+  - name: land rover
+  - name: honda
+
+  - name: volkswagen
+  - name: tesla
+  - name:
+  - name:
+
+
+Part-time Jobs
+  - name: students
+  - name: staff
+  - name: leaflet dist
+  - name: tutoring
+
+  - name: translations
+  - name: graphic des
+  - name: promotional
+  - name: accounting
+
+  - name: web design
+  - name: survey
+  - name: driver
+  # more »
+
+
+
+Pets / Pet Products
+  - name: dogs
+  - name: cats
+
+  - name: huskies
+  - name: retrievers
+
+  - name: birds
+  - name: fish
+
+  - name: turtle
+  - name: aquariums
+
+  - name: pet supplies
+  - name: pet services
+
+
+Real Estate
+  - name: housing for rent
+  - name: housing wanted
+
+  - name: entire rent
+  - name: roommate wanted
+
+  - name: rooms / shared
+  - name: rooms wanted
+
+  - name: sublets / temporary
+  - name: b&b reservations
+
+  - name: vacation rentals
+  - name: housing swap
+
+  - name: new homes
+  - name: owner occupied
+
+  - name: rental shops
+  - name: shops for sale
+
+  - name: office / commercial
+  - name: warehouse / land
+
+  - name: storage / parking
+
+
+Recreation
+  - name: sports and fitness
+  - name: nightclub / bar
+
+  - name: foot / massage
+  - name: bath / spa
+
+
+Resumes
+  - name: resume search
+
+  - name: sales clerk
+  - name: graphic design
+  - name: receptionist
+
+  - name: accountant
+  - name: warehouse mgt
+  - name: assistant
+
+  - name: real estate broker
+  - name: chef
+  - name: bank teller
+
+
+Ticketing
+  - name: tickets
+  - name: movie tickets
+
+  - name: sports
+  - name: attractions
+
+  - name: amuse parks
+  - name: concerts
+
+  - name: cheap flights
+  - name: lottery
+
+  - name: memberships
+  - name: other tickets
+
+
+Tourism
+  - name: tours
+  - name: deals
+  - name: spa
+
+  - name: local travel
+  - name: booking
+  - name: sites
+
+  - name: accommodations
+
+
+Used Cars
+  - name: nationwide
+  - name: local dealers
+
+  - name: $3000 or less
+  - name: $3000 - 6000
+
+  - name: $6000 - 12000
+  - name: $12000 - 24000
+
+  - name: luxury
+  - name: suv
+
+  - name: truck
+  # more »
+
+  # By Brand
+  - name: volkswagen
+  - name: honda
+
+  - name: toyota
+  - name: audi
+
+  - name: bmw
+  - name: buick
+
+  - name: chevrolet
+  - name: nissan
+
+  - name: mercedes-benz
+  - name: ford
+
+  - name: mazda
+  - name: suzuki
+
+  - name: citroen
+  - name: kia
+
+  # Manufacturer Certified Pre-Owned
