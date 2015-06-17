@@ -434,7 +434,6 @@ Subcategory.where(name: 'assistant', category_id: resumes_category.id).first_or_
 Subcategory.where(name: 'real estate broker', category_id: resumes_category.id).first_or_create(name: 'real estate broker', category_id: resumes_category.id)
 Subcategory.where(name: 'chef', category_id: resumes_category.id).first_or_create(name: 'chef', category_id: resumes_category.id)
 Subcategory.where(name: 'bank teller', category_id: resumes_category.id).first_or_create(name: 'bank teller', category_id: resumes_category.id)
-Subcategory.where(name: '', category_id: resumes_category.id).first_or_create(name: '', category_id: resumes_category.id)
 
 # Ticketing
 Subcategory.where(name: 'tickets', category_id: ticketing_category.id).first_or_create(name: 'tickets', category_id: ticketing_category.id)
@@ -447,7 +446,6 @@ Subcategory.where(name: 'cheap flights', category_id: ticketing_category.id).fir
 Subcategory.where(name: 'lottery', category_id: ticketing_category.id).first_or_create(name: 'lottery', category_id: ticketing_category.id)
 Subcategory.where(name: 'memberships', category_id: ticketing_category.id).first_or_create(name: 'memberships', category_id: ticketing_category.id)
 Subcategory.where(name: 'other tickets', category_id: ticketing_category.id).first_or_create(name: 'other tickets', category_id: ticketing_category.id)
-Subcategory.where(name: '', category_id: ticketing_category.id).first_or_create(name: '', category_id: ticketing_category.id)
 
 # Tourism
 Subcategory.where(name: 'tours', category_id: tourism_category.id).first_or_create(name: 'tours', category_id: tourism_category.id)

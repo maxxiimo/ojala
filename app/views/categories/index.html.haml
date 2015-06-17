@@ -4,11 +4,37 @@
 
 .listings
   .col1
-    = render 'pages/mock/real_estate'
+    %h2= link_to 'Miami ' + @real_estate.name, category_path(@real_estate)
+    - @real_estate.subcategories.each_with_index do |subcategory, index|
+      - if index.even?
+        %em.c2= link_to subcategory.name
+      -# FIXME ccm: Should be able to eliminate %br from last entry.
+      -#  if index.odd? && index == index[-1]
+        =#  link_to subcategory.name
+      - if index.odd?
+        = link_to subcategory.name
+        %br
     .line
-    = render 'pages/mock/used_cars'
+    %h3
+      = link_to @used_cars.name, category_path(@used_cars)
+      %span= link_to 'nationwide'
+      %span= link_to 'local dealers'
+    - @used_cars.subcategories.each_with_index do |subcategory, index|
+      - if index.even?
+        %em.c2= link_to subcategory.name
+      - if index.odd?
+        = link_to subcategory.name
+        %br
     .line
-    = render 'pages/mock/new_cars'
+    %h3
+      = link_to @new_cars.name, category_path(@new_cars)
+      %span= link_to 'new ford fusion', mock_home_path, class: 'red'
+    - @new_cars.subcategories.each_with_index do |subcategory, index|
+      - if index.even?
+        %em.c2= link_to subcategory.name
+      - if index.odd?
+        = link_to subcategory.name
+        %br
     .line
     = render 'pages/mock/auto_services'
     .line
