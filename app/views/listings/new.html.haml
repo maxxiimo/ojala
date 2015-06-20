@@ -1,2 +1,38 @@
-%h1 Listings#new
-%p Find me in app/views/listings/new.html.haml
+-# FIXME ccm: Pick a better title!
+- content_for :title do
+  New Listing
+
+.form-new-listing
+  %h2 New Listing
+  = form_for @listing, html: { role: 'form', class: 'form' } do |f|
+    %fieldset
+      %legend New Listing
+      %ol
+        %li
+          -# FIXME ccm: Change to title.
+          .form-label= f.label :name
+          .form-field= f.text_field :name, autofocus: true
+        %li
+          .form-label= f.label :description
+          .form-field= f.text_area :description
+        %li
+          .form-label= f.label :category_id
+          = f.select :category_id, Category.all.map { |f| [f.name, f.id] }
+        %li
+          .form-label= f.label :subcategory_id
+          -# FIXME ccm: upcase this, or change database entries and downcase elsewhere.
+          = f.select :subcategory_id, options_for_select([])
+        %li
+          .form-label= f.label :city
+          .form-field= f.text_field :city
+        %li
+          .form-label= f.label :state
+          .form-field= f.text_field :state
+        %li
+          .form-label= f.label :zipcode
+          .form-field= f.text_field :zipcode
+        %li
+          .form-label= f.label :country
+          .form-field= f.text_field :country
+        %li
+          .form-button= f.submit "Submit"

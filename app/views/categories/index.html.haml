@@ -4,15 +4,17 @@
 
 .listings
   .col1
+    -# FIXME ccm: City needs to be dynamically generated.
+    -# FIXME ccm: Refactor into helper.
     %h2= link_to 'Miami ' + @real_estate.name, category_path(@real_estate)
     - @real_estate.subcategories.each_with_index do |subcategory, index|
       - if index.even?
-        %em.c2= link_to subcategory.name
-      -# FIXME ccm: Should be able to eliminate %br from last entry.
-      -#  if index.odd? && index == index[-1]
+        %em.c2= link_to subcategory.name, category_subcategory_path(@real_estate, subcategory)
+      -# FIXME ccm: Trying to eliminate %br from last entry.
+      -# if index.odd? && index == index[-1]
         =#  link_to subcategory.name
       - if index.odd?
-        = link_to subcategory.name
+        = link_to subcategory.name, category_subcategory_path(@real_estate, subcategory)
         %br
     .line
     %h3
@@ -21,9 +23,9 @@
       %span= link_to 'local dealers'
     - @used_cars.subcategories.each_with_index do |subcategory, index|
       - if index.even?
-        %em.c2= link_to subcategory.name
+        %em.c2= link_to subcategory.name, category_subcategory_path(@used_cars, subcategory)
       - if index.odd?
-        = link_to subcategory.name
+        = link_to subcategory.name, category_subcategory_path(@used_cars, subcategory)
         %br
     .line
     %h3
@@ -31,9 +33,9 @@
       %span= link_to 'new ford fusion', mock_home_path, class: 'red'
     - @new_cars.subcategories.each_with_index do |subcategory, index|
       - if index.even?
-        %em.c2= link_to subcategory.name
+        %em.c2= link_to subcategory.name, category_subcategory_path(@new_cars, subcategory)
       - if index.odd?
-        = link_to subcategory.name
+        = link_to subcategory.name, category_subcategory_path(@new_cars, subcategory)
         %br
     .line
     = render 'pages/mock/auto_services'

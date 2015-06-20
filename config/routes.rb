@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :subcategories
   end
 
+  resources :listings
+
   get 'splash',   to: 'pages#splash',  as: :mock_splash
   get 'home',     to: 'pages#home',    as: :mock_home
 
@@ -13,4 +15,6 @@ Rails.application.routes.draw do
   get 'terms',    to: 'pages#terms'
   get 'privacy',  to: 'pages#privacy'
   get 'contact',  to: 'pages#contact'
+
+  match '/subcategories/find_by_category', to: 'subcategories#find_by_category', via: :post
 end

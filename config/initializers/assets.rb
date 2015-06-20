@@ -9,7 +9,7 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 Rails.application.config.assets.precompile += %w( modernizr-2.8.3.min.js
-                                                  desktop.css
-                                                  tablet.css
                                                   desktop.js
-                                                  tablet.js )
+                                                  tablet.js
+                                                  desktop.css
+                                                  tablet.css )

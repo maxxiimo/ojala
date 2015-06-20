@@ -29,11 +29,6 @@ class CategoriesController < ApplicationController
   end
 
   def show
-  end
-
-  def new
-  end
-
-  def edit
+    @listings = Listing.where(category_id: params[:id])
   end
 end

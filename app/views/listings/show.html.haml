@@ -1,0 +1,13 @@
+-# NOTE ccm: Need to make a decision about what this title should be.
+- content_for :title do
+  Listing
+= nav_at '', in: 'tabs_main'
+
+%p= @listing.name
+%p= @listing.description
+%p= @listing.city
+%p= @listing.state
+%p= @listing.zipcode
+%p= @listing.country
+%p= @listing.id
+%p= time_ago_in_words(@listing.created_at)

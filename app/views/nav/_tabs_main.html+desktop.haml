@@ -1,10 +1,12 @@
 - content_for :tab_navigation do
   %nav{role: "navigation"}
     %ul.tabs
-      =nav_to 'Home', mock_home_path
+      =nav_to 'Home', categories_path
       =nav_to 'Jobs', mock_home_path
-      =nav_to 'Rentals', mock_home_path
-      =nav_to 'Housing', mock_home_path
+      -# FIXME ccm: Should not be hardcoded.
+      -# How will we differentiate between Rentals and Housing?
+      =nav_to 'Rentals', category_path(id: '17')
+      =nav_to 'Housing', category_path(id: '17')
       =nav_to 'Forums', mock_home_path
       =nav_to 'Used Car', mock_home_path
       =nav_to 'New Car', mock_home_path
