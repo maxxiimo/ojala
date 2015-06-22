@@ -126,10 +126,10 @@ Farming / Livestock
 
 
 For Sale
-  - name: local garage sales#, class: 'red'
+  # - name: local garage sales#, class: 'red'
 
-  - name: new ipad 6
-  - name: hot product
+  # - name: new ipad 6
+  # - name: hot product
 
   # Digital • Mobile • Electronic
   - name: cell phones
@@ -242,6 +242,24 @@ Healthcare
   - name: assage
   - name: premature ejac
 
+
+Home
+
+- name: maid service
+- name: nanny
+- name: gardening
+
+- name: recycling
+- name: laundry
+- name: painting
+
+- name: plumbing
+- name: roofing
+- name: security
+
+- name: plants
+- name: insurance
+# - name: more »
 
 Top Industries
   - name: medical / care

@@ -50,6 +50,7 @@ education_and_training_category = Category.where(name: 'Education and Training')
 farming_livestock_category      = Category.where(name: 'Farming / Livestock').first_or_create(name:'Farming / Livestock')
 for_sale_category               = Category.where(name: 'For Sale').first_or_create(name:'For Sale')
 healthcare_category             = Category.where(name: 'Healthcare').first_or_create(name:'Healthcare')
+home_category                   = Category.where(name: 'Home').first_or_create(name:'Home')
 top_industries_category         = Category.where(name: 'Top Industries').first_or_create(name:'Top Industries')
 jobs_category                   = Category.where(name: 'Jobs').first_or_create(name:'Jobs')
 local_services_category         = Category.where(name: 'Local Services').first_or_create(name:'Local Services')
@@ -77,7 +78,7 @@ used_cars_category              = Category.where(name: 'Used Cars').first_or_cre
 
 # LOAD SUBCATEGORIES
 
-# Automotive Services
+## Automotive Services
 Subcategory.where(name: 'carpool', category_id: automotive_services_category.id).first_or_create(name: 'carpool', category_id: automotive_services_category.id)
 Subcategory.where(name: 'ride wanted', category_id: automotive_services_category.id).first_or_create(name: 'ride wanted', category_id: automotive_services_category.id)
 Subcategory.where(name: 'i\'m going / will drive', category_id: automotive_services_category.id).first_or_create(name: 'i\'m going / will drive', category_id: automotive_services_category.id)
@@ -92,7 +93,7 @@ Subcategory.where(name: 'protective', category_id: automotive_services_category.
 Subcategory.where(name: 'car accessories', category_id: automotive_services_category.id).first_or_create(name: 'car accessories', category_id: automotive_services_category.id)
 # other »
 
-# Beauty
+## Beauty
 Subcategory.where(name: 'spa', category_id: beauty_category.id).first_or_create(name: 'spa', category_id: beauty_category.id)
 Subcategory.where(name: 'slimming', category_id: beauty_category.id).first_or_create(name: 'slimming', category_id: beauty_category.id)
 Subcategory.where(name: 'hair', category_id: beauty_category.id).first_or_create(name: 'hair', category_id: beauty_category.id)
@@ -101,7 +102,7 @@ Subcategory.where(name: 'yoga', category_id: beauty_category.id).first_or_create
 Subcategory.where(name: 'nails', category_id: beauty_category.id).first_or_create(name: 'nails', category_id: beauty_category.id)
 Subcategory.where(name: 'facial', category_id: beauty_category.id).first_or_create(name: 'facial', category_id: beauty_category.id)
 
-# Business
+## Business
 Subcategory.where(name: 'patent trademark', category_id: business_category.id).first_or_create(name: 'patent trademark', category_id: business_category.id)
 Subcategory.where(name: 'financial accounting', category_id: business_category.id).first_or_create(name: 'financial accounting', category_id: business_category.id)
 Subcategory.where(name: 'taxes', category_id: business_category.id).first_or_create(name: 'taxes', category_id: business_category.id)
@@ -125,7 +126,7 @@ Subcategory.where(name: 'building', category_id: business_category.id).first_or_
 Subcategory.where(name: 'mechanical maint', category_id: business_category.id).first_or_create(name: 'mechanical maint', category_id: business_category.id)
 Subcategory.where(name: 'business registration', category_id: business_category.id).first_or_create(name: 'business registration', category_id: business_category.id)
 
-# Dating
+## Dating
 Subcategory.where(name: 'strictly platonic', category_id: dating_category.id).first_or_create(name: 'strictly platonic', category_id: dating_category.id)
 Subcategory.where(name: 'casual encounters', category_id: dating_category.id).first_or_create(name: 'casual encounters', category_id: dating_category.id)
 Subcategory.where(name: 'women seek women', category_id: dating_category.id).first_or_create(name: 'women seek women', category_id: dating_category.id)
@@ -135,13 +136,13 @@ Subcategory.where(name: 'men seeking men', category_id: dating_category.id).firs
 Subcategory.where(name: 'misc romance', category_id: dating_category.id).first_or_create(name: 'misc romance', category_id: dating_category.id)
 Subcategory.where(name: 'missed connections', category_id: dating_category.id).first_or_create(name: 'missed connections', category_id: dating_category.id)
 
-# Dining
+## Dining
 Subcategory.where(name: 'takeaway', category_id: dining_category.id).first_or_create(name: 'takeaway', category_id: dining_category.id)
 Subcategory.where(name: 'catering', category_id: dining_category.id).first_or_create(name: 'catering', category_id: dining_category.id)
 Subcategory.where(name: 'gourmet', category_id: dining_category.id).first_or_create(name: 'gourmet', category_id: dining_category.id)
 Subcategory.where(name: 'cake order', category_id: dining_category.id).first_or_create(name: 'cake order', category_id: dining_category.id)
 
-# Education and Training
+## Education and Training
 Subcategory.where(name: 'tutoring agency', category_id: education_and_training_category.id).first_or_create(name: 'tutoring agency', category_id: education_and_training_category.id)
 Subcategory.where(name: 'private tutor', category_id: education_and_training_category.id).first_or_create(name: 'private tutor', category_id: education_and_training_category.id)
 Subcategory.where(name: 'language', category_id: education_and_training_category.id).first_or_create(name: 'language', category_id: education_and_training_category.id)
@@ -154,7 +155,7 @@ Subcategory.where(name: 'classes', category_id: education_and_training_category.
 Subcategory.where(name: 'abroad', category_id: education_and_training_category.id).first_or_create(name: 'abroad', category_id: education_and_training_category.id)
 Subcategory.where(name: 'academic institutions', category_id: education_and_training_category.id).first_or_create(name: 'academic institutions', category_id: education_and_training_category.id)
 
-# Farming / Livestock
+## Farming / Livestock
 Subcategory.where(name: 'garden flowers', category_id: farming_livestock_category.id).first_or_create(name: 'garden flowers', category_id: farming_livestock_category.id)
 Subcategory.where(name: 'crops', category_id: farming_livestock_category.id).first_or_create(name: 'crops', category_id: farming_livestock_category.id)
 Subcategory.where(name: 'plant seedlings', category_id: farming_livestock_category.id).first_or_create(name: 'plant seedlings', category_id: farming_livestock_category.id)
@@ -167,10 +168,10 @@ Subcategory.where(name: 'agent', category_id: farming_livestock_category.id).fir
 Subcategory.where(name: 'farm mach / equip', category_id: farming_livestock_category.id).first_or_create(name: 'farm mach / equip', category_id: farming_livestock_category.id)
 Subcategory.where(name: 'processing of agricultural products', category_id: farming_livestock_category.id).first_or_create(name: 'processing of agricultural products', category_id: farming_livestock_category.id)
 
-# For Sale
-Subcategory.where(name: 'local garage sales', category_id: for_sale_category.id).first_or_create(name: 'local garage sales', category_id: for_sale_category.id)
-Subcategory.where(name: 'new ipad 6', category_id: for_sale_category.id).first_or_create(name: 'new ipad 6', category_id: for_sale_category.id)
-Subcategory.where(name: 'hot product', category_id: for_sale_category.id).first_or_create(name: 'hot product', category_id: for_sale_category.id)
+## For Sale
+# Subcategory.where(name: 'local garage sales', category_id: for_sale_category.id).first_or_create(name: 'local garage sales', category_id: for_sale_category.id)
+# Subcategory.where(name: 'new ipad 6', category_id: for_sale_category.id).first_or_create(name: 'new ipad 6', category_id: for_sale_category.id)
+# Subcategory.where(name: 'hot product', category_id: for_sale_category.id).first_or_create(name: 'hot product', category_id: for_sale_category.id)
 # Digital • Mobile • Electronic
 Subcategory.where(name: 'cell phones', category_id: for_sale_category.id).first_or_create(name: 'cell phones', category_id: for_sale_category.id)
 Subcategory.where(name: 'samsung', category_id: for_sale_category.id).first_or_create(name: 'samsung', category_id: for_sale_category.id)
@@ -225,7 +226,7 @@ Subcategory.where(name: 'musical instr', category_id: for_sale_category.id).firs
 Subcategory.where(name: 'books', category_id: for_sale_category.id).first_or_create(name: 'books', category_id: for_sale_category.id)
 Subcategory.where(name: 'collectibles', category_id: for_sale_category.id).first_or_create(name: 'collectibles', category_id: for_sale_category.id)
 Subcategory.where(name: 'general', category_id: for_sale_category.id).first_or_create(name: 'general', category_id: for_sale_category.id)
-Subcategory.where(name: 'Is that', category_id: for_sale_category.id).first_or_create(name: 'wanted', category_id: for_sale_category.id)
+Subcategory.where(name: 'wanted', category_id: for_sale_category.id).first_or_create(name: 'wanted', category_id: for_sale_category.id)
 Subcategory.where(name: 'FREE', category_id: for_sale_category.id).first_or_create(name: 'FREE', category_id: for_sale_category.id)
 Subcategory.where(name: 'jewelry', category_id: for_sale_category.id).first_or_create(name: 'jewelry', category_id: for_sale_category.id)
 Subcategory.where(name: 'materials', category_id: for_sale_category.id).first_or_create(name: 'materials', category_id: for_sale_category.id)
@@ -239,8 +240,7 @@ Subcategory.where(name: 'printer', category_id: for_sale_category.id).first_or_c
 Subcategory.where(name: 'used equip', category_id: for_sale_category.id).first_or_create(name: 'used equip', category_id: for_sale_category.id)
 Subcategory.where(name: 'construct mach', category_id: for_sale_category.id).first_or_create(name: 'construct mach', category_id: for_sale_category.id)
 
-
-# Healthcare
+## Healthcare
 Subcategory.where(name: 'dermatology', category_id: healthcare_category.id).first_or_create(name: 'dermatology', category_id: healthcare_category.id)
 Subcategory.where(name: 'gynecology', category_id: healthcare_category.id).first_or_create(name: 'gynecology', category_id: healthcare_category.id)
 Subcategory.where(name: 'genital warts', category_id: healthcare_category.id).first_or_create(name: 'genital warts', category_id: healthcare_category.id)
@@ -251,7 +251,21 @@ Subcategory.where(name: 'infertility', category_id: healthcare_category.id).firs
 Subcategory.where(name: 'massage', category_id: healthcare_category.id).first_or_create(name: 'massage', category_id: healthcare_category.id)
 Subcategory.where(name: 'premature ejac', category_id: healthcare_category.id).first_or_create(name: 'premature ejac', category_id: healthcare_category.id)
 
-# Top Industries
+## Home
+Subcategory.where(name: 'maid service', category_id: home_category.id).first_or_create(name: 'maid service', category_id: home_category.id)
+Subcategory.where(name: 'nanny', category_id: home_category.id).first_or_create(name: 'nanny', category_id: home_category.id)
+Subcategory.where(name: 'gardening', category_id: home_category.id).first_or_create(name: 'gardening', category_id: home_category.id)
+Subcategory.where(name: 'recycling', category_id: home_category.id).first_or_create(name: 'recycling', category_id: home_category.id)
+Subcategory.where(name: 'laundry', category_id: home_category.id).first_or_create(name: 'laundry', category_id: home_category.id)
+Subcategory.where(name: 'painting', category_id: home_category.id).first_or_create(name: 'painting', category_id: home_category.id)
+Subcategory.where(name: 'plumbing', category_id: home_category.id).first_or_create(name: 'plumbing', category_id: home_category.id)
+Subcategory.where(name: 'roofing', category_id: home_category.id).first_or_create(name: 'roofing', category_id: home_category.id)
+Subcategory.where(name: 'security', category_id: home_category.id).first_or_create(name: 'security', category_id: home_category.id)
+Subcategory.where(name: 'plants', category_id: home_category.id).first_or_create(name: 'plants', category_id: home_category.id)
+Subcategory.where(name: 'insurance', category_id: home_category.id).first_or_create(name: 'insurance', category_id: home_category.id)
+# more »
+
+## Top Industries
 Subcategory.where(name: 'medical / care', category_id: top_industries_category.id).first_or_create(name: 'medical / care', category_id: top_industries_category.id)
 Subcategory.where(name: 'massage', category_id: top_industries_category.id).first_or_create(name: 'massage', category_id: top_industries_category.id)
 Subcategory.where(name: 'computer / network', category_id: top_industries_category.id).first_or_create(name: 'computer / network', category_id: top_industries_category.id)
@@ -277,7 +291,7 @@ Subcategory.where(name: 'edu / training', category_id: top_industries_category.i
 Subcategory.where(name: 'textile / food', category_id: top_industries_category.id).first_or_create(name: 'textile / food', category_id: top_industries_category.id)
 Subcategory.where(name: 'automotive services', category_id: top_industries_category.id).first_or_create(name: 'automotive services', category_id: top_industries_category.id)
 
-# Jobs
+## Jobs
 # create online resume
 Subcategory.where(name: 'sales', category_id: jobs_category.id).first_or_create(name: 'sales', category_id: jobs_category.id)
 Subcategory.where(name: 'service', category_id: jobs_category.id).first_or_create(name: 'service', category_id: jobs_category.id)
@@ -340,10 +354,10 @@ Subcategory.where(name: 'tallymen', category_id: jobs_category.id).first_or_crea
 Subcategory.where(name: 'property', category_id: jobs_category.id).first_or_create(name: 'property', category_id: jobs_category.id)
 # more »
 
-# Local Services
+## Local Services
 # Subcategory.where(name: '', category_id: local_services_category.id).first_or_create(name: '', category_id: local_services_category.id)
 
-# Meet Up
+## Meet Up
 # start a group
 Subcategory.where(name: 'volunteering', category_id: meet_up_category.id).first_or_create(name: 'volunteering', category_id: meet_up_category.id)
 Subcategory.where(name: 'writing', category_id: meet_up_category.id).first_or_create(name: 'writing', category_id: meet_up_category.id)
@@ -361,7 +375,7 @@ Subcategory.where(name: 'social', category_id: meet_up_category.id).first_or_cre
 Subcategory.where(name: 'moms', category_id: meet_up_category.id).first_or_create(name: 'moms', category_id: meet_up_category.id)
 Subcategory.where(name: 'entrepreneurship', category_id: meet_up_category.id).first_or_create(name: 'entrepreneurship', category_id: meet_up_category.id)
 
-# New Cars
+## New Cars
 # new ford fusion, class: 'red'
 Subcategory.where(name: 'hot prices', category_id: new_cars_category.id).first_or_create(name: 'hot prices', category_id: new_cars_category.id)
 Subcategory.where(name: 'porsche', category_id: new_cars_category.id).first_or_create(name: 'porsche', category_id: new_cars_category.id)
@@ -372,7 +386,7 @@ Subcategory.where(name: 'honda', category_id: new_cars_category.id).first_or_cre
 Subcategory.where(name: 'volkswagen', category_id: new_cars_category.id).first_or_create(name: 'volkswagen', category_id: new_cars_category.id)
 Subcategory.where(name: 'tesla', category_id: new_cars_category.id).first_or_create(name: 'tesla', category_id: new_cars_category.id)
 
-# Part-time Jobs
+## Part-time Jobs
 Subcategory.where(name: 'students', category_id: part_time_jobs_category.id).first_or_create(name: 'students', category_id: part_time_jobs_category.id)
 Subcategory.where(name: 'staff', category_id: part_time_jobs_category.id).first_or_create(name: 'staff', category_id: part_time_jobs_category.id)
 Subcategory.where(name: 'leaflet dist', category_id: part_time_jobs_category.id).first_or_create(name: 'leaflet dist', category_id: part_time_jobs_category.id)
@@ -386,7 +400,7 @@ Subcategory.where(name: 'survey', category_id: part_time_jobs_category.id).first
 Subcategory.where(name: 'driver', category_id: part_time_jobs_category.id).first_or_create(name: 'driver', category_id: part_time_jobs_category.id)
 # more »
 
-# Pets / Pet Products
+## Pets / Pet Products
 Subcategory.where(name: 'dogs', category_id: pets_pet_products_category.id).first_or_create(name: 'dogs', category_id: pets_pet_products_category.id)
 Subcategory.where(name: 'cats', category_id: pets_pet_products_category.id).first_or_create(name: 'cats', category_id: pets_pet_products_category.id)
 Subcategory.where(name: 'huskies', category_id: pets_pet_products_category.id).first_or_create(name: 'huskies', category_id: pets_pet_products_category.id)
@@ -398,7 +412,7 @@ Subcategory.where(name: 'aquariums', category_id: pets_pet_products_category.id)
 Subcategory.where(name: 'pet supplies', category_id: pets_pet_products_category.id).first_or_create(name: 'pet supplies', category_id: pets_pet_products_category.id)
 Subcategory.where(name: 'pet services', category_id: pets_pet_products_category.id).first_or_create(name: 'pet services', category_id: pets_pet_products_category.id)
 
-# Real Estate
+## Real Estate
 Subcategory.where(name: 'housing for rent', category_id: real_estate_category.id).first_or_create(name: 'housing for rent', category_id: real_estate_category.id)
 Subcategory.where(name: 'housing wanted', category_id: real_estate_category.id).first_or_create(name: 'housing wanted', category_id: real_estate_category.id)
 Subcategory.where(name: 'entire rent', category_id: real_estate_category.id).first_or_create(name: 'entire rent', category_id: real_estate_category.id)
@@ -417,13 +431,13 @@ Subcategory.where(name: 'office / commercial', category_id: real_estate_category
 Subcategory.where(name: 'warehouse / land', category_id: real_estate_category.id).first_or_create(name: 'warehouse / land', category_id: real_estate_category.id)
 Subcategory.where(name: 'storage / parking', category_id: real_estate_category.id).first_or_create(name: 'storage / parking', category_id: real_estate_category.id)
 
-# Recreation
+## Recreation
 Subcategory.where(name: 'sports and fitness', category_id: recreation_category.id).first_or_create(name: 'sports and fitness', category_id: recreation_category.id)
 Subcategory.where(name: 'nightclub / bar', category_id: recreation_category.id).first_or_create(name: 'nightclub / bar', category_id: recreation_category.id)
 Subcategory.where(name: 'foot / massage', category_id: recreation_category.id).first_or_create(name: 'foot / massage', category_id: recreation_category.id)
 Subcategory.where(name: 'bath / spa', category_id: recreation_category.id).first_or_create(name: 'bath / spa', category_id: recreation_category.id)
 
-# Resumes
+## Resumes
 # resume search
 Subcategory.where(name: 'sales clerk', category_id: resumes_category.id).first_or_create(name: 'sales clerk', category_id: resumes_category.id)
 Subcategory.where(name: 'graphic design', category_id: resumes_category.id).first_or_create(name: 'graphic design', category_id: resumes_category.id)
@@ -435,7 +449,7 @@ Subcategory.where(name: 'real estate broker', category_id: resumes_category.id).
 Subcategory.where(name: 'chef', category_id: resumes_category.id).first_or_create(name: 'chef', category_id: resumes_category.id)
 Subcategory.where(name: 'bank teller', category_id: resumes_category.id).first_or_create(name: 'bank teller', category_id: resumes_category.id)
 
-# Ticketing
+## Ticketing
 Subcategory.where(name: 'tickets', category_id: ticketing_category.id).first_or_create(name: 'tickets', category_id: ticketing_category.id)
 Subcategory.where(name: 'movie tickets', category_id: ticketing_category.id).first_or_create(name: 'movie tickets', category_id: ticketing_category.id)
 Subcategory.where(name: 'sports', category_id: ticketing_category.id).first_or_create(name: 'sports', category_id: ticketing_category.id)
@@ -447,7 +461,7 @@ Subcategory.where(name: 'lottery', category_id: ticketing_category.id).first_or_
 Subcategory.where(name: 'memberships', category_id: ticketing_category.id).first_or_create(name: 'memberships', category_id: ticketing_category.id)
 Subcategory.where(name: 'other tickets', category_id: ticketing_category.id).first_or_create(name: 'other tickets', category_id: ticketing_category.id)
 
-# Tourism
+## Tourism
 Subcategory.where(name: 'tours', category_id: tourism_category.id).first_or_create(name: 'tours', category_id: tourism_category.id)
 Subcategory.where(name: 'deals', category_id: tourism_category.id).first_or_create(name: 'deals', category_id: tourism_category.id)
 Subcategory.where(name: 'spa', category_id: tourism_category.id).first_or_create(name: 'spa', category_id: tourism_category.id)
@@ -456,7 +470,7 @@ Subcategory.where(name: 'booking', category_id: tourism_category.id).first_or_cr
 Subcategory.where(name: 'sites', category_id: tourism_category.id).first_or_create(name: 'sites', category_id: tourism_category.id)
 Subcategory.where(name: 'accommodations', category_id: tourism_category.id).first_or_create(name: 'accommodations', category_id: tourism_category.id)
 
-# Used Cars
+## Used Cars
 Subcategory.where(name: 'nationwide', category_id: used_cars_category.id).first_or_create(name: 'nationwide', category_id: used_cars_category.id)
 Subcategory.where(name: 'local dealers', category_id: used_cars_category.id).first_or_create(name: 'local dealers', category_id: used_cars_category.id)
 Subcategory.where(name: '$3000 or less', category_id: used_cars_category.id).first_or_create(name: '$3000 or less', category_id: used_cars_category.id)
