@@ -9,8 +9,7 @@
     %li
       = listing.id
       = listing.created_at.strftime('%B %d, %Y')
-      -# FIXME ccm: Change to title.
-      = link_to listing.name, listing
+      = link_to listing.title, listing
       = listing.description
       = listing.city
       = listing.state
