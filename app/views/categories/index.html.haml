@@ -7,17 +7,17 @@
   .col1
     -# FIXME ccm: City needs to be dynamically generated.
     -# FIXME ccm: Refactor into helper.
+    -# FIXME ccm: The very last record does not need a %br
     %h2= link_to 'Miami ' + @real_estate.name, category_path(@real_estate)
-    - @real_estate.subcategories.each_with_index do |subcategory, index|
-      - if index.even?
-        %em.c2= link_to subcategory.name, category_subcategory_path(@real_estate, subcategory)
-      -# FIXME ccm: Trying to eliminate %br from last entry.
-      -# if index.odd? && index == index[-1]
-        =#  link_to subcategory.name
-      - if index.odd?
+    - @real_estate.subcategories.each_with_index do |subcategory, i|
+      - section_break = (i+1) % 2 == 0
+      - if section_break
         = link_to subcategory.name, category_subcategory_path(@real_estate, subcategory)
         %br
+      - else
+        %em.c2= link_to subcategory.name, category_subcategory_path(@real_estate, subcategory)
     .line
+
     -# FIXME ccm: Needs...
     -# %h5 By Brand
     -# %h5 Manufacturer Certified Pre-Owned
@@ -25,13 +25,15 @@
       = link_to @used_cars.name, category_path(@used_cars)
       %span= link_to 'nationwide'
       %span= link_to 'local dealers'
-    - @used_cars.subcategories.each_with_index do |subcategory, index|
-      - if index.even?
-        %em.c2= link_to subcategory.name, category_subcategory_path(@used_cars, subcategory)
-      - if index.odd?
+    - @used_cars.subcategories.each_with_index do |subcategory, i|
+      - section_break = (i+1) % 2 == 0
+      - if section_break
         = link_to subcategory.name, category_subcategory_path(@used_cars, subcategory)
         %br
+      - else
+        %em.c2= link_to subcategory.name, category_subcategory_path(@used_cars, subcategory)
     .line
+
     %h3
       = link_to @new_cars.name, category_path(@new_cars)
       %span= link_to 'new ford fusion', mock_home_path, class: 'red'
@@ -44,26 +46,29 @@
     .line
     -# FIXME ccm: Needs %h5 Maintenance
     %h3= link_to @automotive_services.name, category_path(@automotive_services)
-    - @automotive_services.subcategories.each_with_index do |subcategory, index|
-      - if index.even?
-        %em.c2= link_to subcategory.name, category_subcategory_path(@automotive_services, subcategory)
-      - if index.odd?
+    - @automotive_services.subcategories.each_with_index do |subcategory, i|
+      - section_break = (i+1) % 2 == 0
+      - if section_break
         = link_to subcategory.name, category_subcategory_path(@automotive_services, subcategory)
         %br
+      - else
+        %em.c2= link_to subcategory.name, category_subcategory_path(@automotive_services, subcategory)
     .line
+
     %h3= link_to @education_and_training.name, category_path(@education_and_training)
-    - @education_and_training.subcategories.each_with_index do |subcategory, index|
-      - if index.even?
-        %em.c2= link_to subcategory.name, category_subcategory_path(@education_and_training, subcategory)
-      - if index.odd?
+    - @education_and_training.subcategories.each_with_index do |subcategory, i|
+      - section_break = (i+1) % 2 == 0
+      - if section_break
         = link_to subcategory.name, category_subcategory_path(@education_and_training, subcategory)
         %br
+      - else
+        %em.c2= link_to subcategory.name, category_subcategory_path(@education_and_training, subcategory)
 
   .col2
     %h2
       = link_to @for_sale.name, category_path(@for_sale)
       %span= link_to 'local garage sales', mock_home_path, class: 'red'
-    -# FIXME ccm: Need...
+    -# FIXME ccm: Needs...
     -# %h5 Digital • Mobile • Electronic
     -# %h5 Furniture • Appliances
     -# %h5 Department Store • General
@@ -76,23 +81,26 @@
         %br
       - else
         %em.c2= link_to subcategory.name, category_subcategory_path(@for_sale, subcategory)
-
     .line
+
     %h3= link_to @pets_pet_products.name, category_path(@pets_pet_products)
-    - @pets_pet_products.subcategories.each_with_index do |subcategory, index|
-      - if index.even?
-        %em.c2= link_to subcategory.name, category_subcategory_path(@pets_pet_products, subcategory)
-      - if index.odd?
+    - @pets_pet_products.subcategories.each_with_index do |subcategory, i|
+      - section_break = (i+1) % 2 == 0
+      - if section_break
         = link_to subcategory.name, category_subcategory_path(@pets_pet_products, subcategory)
         %br
+      - else
+        %em.c2= link_to subcategory.name, category_subcategory_path(@pets_pet_products, subcategory)
     .line
+
     %h3= link_to @ticketing.name, category_path(@ticketing)
-    - @ticketing.subcategories.each_with_index do |subcategory, index|
-      - if index.even?
-        %em.c2= link_to subcategory.name, category_subcategory_path(@ticketing, subcategory)
-      - if index.odd?
+    - @ticketing.subcategories.each_with_index do |subcategory, i|
+      - section_break = (i+1) % 2 == 0
+      - if section_break
         = link_to subcategory.name, category_subcategory_path(@ticketing, subcategory)
         %br
+      - else
+        %em.c2= link_to subcategory.name, category_subcategory_path(@ticketing, subcategory)
 
   .col3
     %h2
@@ -121,33 +129,155 @@
         %br
       - else
         %em.c4= link_to subcategory.name, category_subcategory_path(@jobs, subcategory)
+    .line
 
+    %h3= link_to @top_industries.name, category_path(@top_industries)
+
+    -# - @top_industries.subcategories.each_with_index do |subcategory, i|
+    -#   - section_break_1 = (i+1) % 3 == 0
+    -#   - section_break_2 = (i+1) % 2 == 0
+    -#   - if section_break_1
+    -#     = link_to subcategory.name, category_subcategory_path(@top_industries, subcategory)
+    -#     %br
+    -#   - elsif section_break_2
+    -#     %em.c3b= link_to subcategory.name, category_subcategory_path(@top_industries, subcategory)
+    -#   - else
+    -#     %em.c3a= link_to subcategory.name, category_subcategory_path(@top_industries, subcategory)
+
+    - @top_industries.subcategories.each_slice(3) do |s1, s2, s3|
+      - unless s1.nil?
+        %em.c3a= link_to s1.name, category_subcategory_path(@top_industries, s1)
+      - unless s2.nil?
+        %em.c3b= link_to s2.name, category_subcategory_path(@top_industries, s2)
+      - unless s3.nil?
+        = link_to s3.name, category_subcategory_path(@top_industries, s3)
+        %br
     .line
-    = render 'pages/mock/industries'
+
+    %h3= link_to @part_time_jobs.name, category_path(@part_time_jobs)
+    - @part_time_jobs.subcategories.each_with_index do |subcategory, i|
+      - section_break = (i+1) % 4 == 0
+      - if section_break
+        = link_to subcategory.name, category_subcategory_path(@part_time_jobs, subcategory)
+        %br
+      - else
+        %em.c4= link_to subcategory.name, category_subcategory_path(@part_time_jobs, subcategory)
     .line
-    = render 'pages/mock/part_time'
+
+    %h3
+      = link_to @resumes.name, category_path(@resumes)
+      %span= link_to 'resume search', mock_home_path
+    - @resumes.subcategories.each_with_index do |subcategory, i|
+      - section_break = (i+1) % 3 == 0
+      - if section_break
+        = link_to subcategory.name, category_subcategory_path(@resumes, subcategory)
+        %br
+      - else
+        %em.c3= link_to subcategory.name, category_subcategory_path(@resumes, subcategory)
     .line
-    = render 'pages/mock/resumes'
+
+    %h3
+      = link_to @meet_up.name, category_path(@meet_up)
+      %span= link_to 'start a group', mock_home_path
+    - @meet_up.subcategories.each_slice(3) do |s1, s2, s3|
+      - unless s1.nil?
+        %em.c3a= link_to s1.name, category_subcategory_path(@meet_up, s1)
+      - unless s2.nil?
+        %em.c3b= link_to s2.name, category_subcategory_path(@meet_up, s2)
+      - unless s3.nil?
+        = link_to s3.name, category_subcategory_path(@meet_up, s3)
+        %br
     .line
-    = render 'pages/mock/meet_up'
-    .line
-    = render 'pages/mock/dating'
+
+    %h3= link_to 'Miami ' + @dating.name, category_path(@dating)
+    - @dating.subcategories.each_with_index do |subcategory, i|
+      - section_break = (i+1) % 2 == 0
+      - if section_break
+        = link_to subcategory.name, category_subcategory_path(@dating, subcategory)
+        %br
+      - else
+        %em.c2= link_to subcategory.name, category_subcategory_path(@dating, subcategory)
 
   .col4
-    = render 'pages/mock/local_services'
+    %h2= link_to @local_services.name, category_path(@local_services)
     .line
-    = render 'pages/mock/home'
+
+    %h3= link_to @home.name, category_path(@home)
+    - @home.subcategories.each_with_index do |subcategory, i|
+      - section_break = (i+1) % 3 == 0
+      - if section_break
+        = link_to subcategory.name, category_subcategory_path(@home, subcategory)
+        %br
+      - else
+        %em.c3= link_to subcategory.name, category_subcategory_path(@home, subcategory)
     .line
-    = render 'pages/mock/tourism'
+
+    %h3= link_to @tourism.name, category_path(@tourism)
+    - @tourism.subcategories.each_with_index do |subcategory, i|
+      - section_break = (i+1) % 3 == 0
+      - if section_break
+        = link_to subcategory.name, category_subcategory_path(@tourism, subcategory)
+        %br
+      - else
+        %em.c3= link_to subcategory.name, category_subcategory_path(@tourism, subcategory)
+
     .line
-    = render 'pages/mock/business'
+
+    %h3= link_to @business.name, category_path(@business)
+    - @business.subcategories.each_with_index do |subcategory, i|
+      - section_break = (i+1) % 2 == 0
+      - if section_break
+        = link_to subcategory.name, category_subcategory_path(@business, subcategory)
+        %br
+      - else
+        %em.c2= link_to subcategory.name, category_subcategory_path(@business, subcategory)
     .line
-    = render 'pages/mock/recreation'
+
+    %h3= link_to @recreation.name, category_path(@recreation)
+    - @recreation.subcategories.each_with_index do |subcategory, i|
+      - section_break = (i+1) % 2 == 0
+      - if section_break
+        = link_to subcategory.name, category_subcategory_path(@recreation, subcategory)
+        %br
+      - else
+        %em.c2= link_to subcategory.name, category_subcategory_path(@recreation, subcategory)
     .line
-    = render 'pages/mock/healthcare'
+
+    %h3= link_to @healthcare.name, category_path(@healthcare)
+    - @healthcare.subcategories.each_with_index do |subcategory, i|
+      - section_break = (i+1) % 3 == 0
+      - if section_break
+        = link_to subcategory.name, category_subcategory_path(@healthcare, subcategory)
+        %br
+      - else
+        %em.c3= link_to subcategory.name, category_subcategory_path(@healthcare, subcategory)
     .line
-    = render 'pages/mock/dining'
+
+    %h3= link_to @dining.name, category_path(@dining)
+    - @dining.subcategories.each_with_index do |subcategory, i|
+      - section_break = (i+1) % 3 == 0
+      - if section_break
+        = link_to subcategory.name, category_subcategory_path(@dining, subcategory)
+        %br
+      - else
+        %em.c3= link_to subcategory.name, category_subcategory_path(@dining, subcategory)
     .line
-    = render 'pages/mock/farming_livestock'
+
+    %h3= link_to @farming_livestock.name, category_path(@farming_livestock)
+    - @farming_livestock.subcategories.each_with_index do |subcategory, i|
+      - section_break = (i+1) % 2 == 0
+      - if section_break
+        = link_to subcategory.name, category_subcategory_path(@farming_livestock, subcategory)
+        %br
+      - else
+        %em.c2= link_to subcategory.name, category_subcategory_path(@farming_livestock, subcategory)
     .line
-    = render 'pages/mock/beauty'
+
+    %h3= link_to @beauty.name, category_path(@beauty)
+    - @beauty.subcategories.each_with_index do |subcategory, i|
+      - section_break = (i+1) % 4 == 0
+      - if section_break
+        = link_to subcategory.name, category_subcategory_path(@beauty, subcategory)
+        %br
+      - else
+        %em.c4= link_to subcategory.name, category_subcategory_path(@beauty, subcategory)
