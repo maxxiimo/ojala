@@ -4,7 +4,7 @@ class ListingsController < ApplicationController
   end
 
   def create
-    @listing  = Listing.new(listing_params)
+    @listing = Listing.new(listing_params)
     @listing.save
     redirect_to @listing
   end

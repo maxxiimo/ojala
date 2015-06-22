@@ -13,6 +13,7 @@ class CategoriesController < ApplicationController
     @farming_livestock      = @categories[6]
     @for_sale               = @categories[7]
     @healthcare             = @categories[8]
+    @home                   = @categories[22]
     @top_industries         = @categories[9]
     @jobs                   = @categories[10]
     @local_services         = @categories[11]
