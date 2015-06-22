@@ -4,7 +4,7 @@
 # user = User.find_or_create_by!([
 # NoMethodError: undefined method `%' for #<Hash:0xc4ab5f8>
 
-user = User.create!([
+user = User.create([
   { username: 'Test 1', email: 'test1@ojala.com', password: 'password', password_confirmation: 'password' },
   { username: 'Test 2', email: 'test2@ojala.com', password: 'password', password_confirmation: 'password' },
   { username: 'Test 3', email: 'test3@ojala.com', password: 'password', password_confirmation: 'password' }
@@ -17,8 +17,6 @@ user = User.create!([
 # user.skip_confirmation!
 # user.confirm!
 
-user.save!
-
 # NOTE ccm: This configuration will result in:
 # ArgumentError: When assigning attributes, you must pass a hash as an argument.
 #
@@ -28,7 +26,9 @@ user.save!
 #   { username: 'Test 3', email: 'test3@ojala.com', password: 'password', password_confirmation: 'password' }
 # ])
 # user.skip_confirmation!
-# user.create
+# user.save
+
+# LOAD CATEGORIES
 
 # NOTE ccm: Probably would be better to use the following:
 #
@@ -38,8 +38,6 @@ user.save!
 #   category = Category.find_or_create_by(name: c['name'])
 #   category.save
 # end
-
-# LOAD CATEGORIES
 
 automotive_services_category    = Category.where(name: 'Automotive Services').first_or_create(name:'Automotive Services')
 beauty_category                 = Category.where(name: 'Beauty').first_or_create(name:'Beauty')
