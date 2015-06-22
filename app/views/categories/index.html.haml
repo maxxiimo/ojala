@@ -3,6 +3,7 @@
 = nav_at 'Home', in: 'tabs_main'
 
 .listings
+  -# FIXME ccm: Need to be able to change order of subcategories.
   .col1
     -# FIXME ccm: City needs to be dynamically generated.
     -# FIXME ccm: Refactor into helper.
@@ -17,6 +18,9 @@
         = link_to subcategory.name, category_subcategory_path(@real_estate, subcategory)
         %br
     .line
+    -# FIXME ccm: Needs...
+    -# %h5 By Brand
+    -# %h5 Manufacturer Certified Pre-Owned
     %h3
       = link_to @used_cars.name, category_path(@used_cars)
       %span= link_to 'nationwide'
@@ -38,19 +42,86 @@
         = link_to subcategory.name, category_subcategory_path(@new_cars, subcategory)
         %br
     .line
-    = render 'pages/mock/auto_services'
+    -# FIXME ccm: Needs %h5 Maintenance
+    %h3= link_to @automotive_services.name, category_path(@automotive_services)
+    - @automotive_services.subcategories.each_with_index do |subcategory, index|
+      - if index.even?
+        %em.c2= link_to subcategory.name, category_subcategory_path(@automotive_services, subcategory)
+      - if index.odd?
+        = link_to subcategory.name, category_subcategory_path(@automotive_services, subcategory)
+        %br
     .line
-    = render 'pages/mock/education_training'
+    %h3= link_to @education_and_training.name, category_path(@education_and_training)
+    - @education_and_training.subcategories.each_with_index do |subcategory, index|
+      - if index.even?
+        %em.c2= link_to subcategory.name, category_subcategory_path(@education_and_training, subcategory)
+      - if index.odd?
+        = link_to subcategory.name, category_subcategory_path(@education_and_training, subcategory)
+        %br
 
   .col2
-    = render 'pages/mock/for_sale'
+    %h2
+      = link_to @for_sale.name, category_path(@for_sale)
+      %span= link_to 'local garage sales', mock_home_path, class: 'red'
+    -# FIXME ccm: Need...
+    -# %h5 Digital • Mobile • Electronic
+    -# %h5 Furniture • Appliances
+    -# %h5 Department Store • General
+    -# %h5 Office Equipment
+    -# FIXME ccm: Will also need to be able to apply classes to specific items.
+    - @for_sale.subcategories.each_with_index do |subcategory, i|
+      - section_break = (i+1) % 2 == 0
+      - if section_break
+        = link_to subcategory.name, category_subcategory_path(@for_sale, subcategory)
+        %br
+      - else
+        %em.c2= link_to subcategory.name, category_subcategory_path(@for_sale, subcategory)
+
     .line
-    = render 'pages/mock/pets'
+    %h3= link_to @pets_pet_products.name, category_path(@pets_pet_products)
+    - @pets_pet_products.subcategories.each_with_index do |subcategory, index|
+      - if index.even?
+        %em.c2= link_to subcategory.name, category_subcategory_path(@pets_pet_products, subcategory)
+      - if index.odd?
+        = link_to subcategory.name, category_subcategory_path(@pets_pet_products, subcategory)
+        %br
     .line
-    = render 'pages/mock/tickets'
+    %h3= link_to @ticketing.name, category_path(@ticketing)
+    - @ticketing.subcategories.each_with_index do |subcategory, index|
+      - if index.even?
+        %em.c2= link_to subcategory.name, category_subcategory_path(@ticketing, subcategory)
+      - if index.odd?
+        = link_to subcategory.name, category_subcategory_path(@ticketing, subcategory)
+        %br
 
   .col3
-    = render 'pages/mock/jobs'
+    %h2
+      = link_to @jobs.name, category_path(@jobs)
+      %span= link_to 'create online resume', mock_home_path
+
+    -# - @jobs.subcategories.each_slice(4) do |array|
+    -#   - array.each_with_index do |subcategory, i|
+    -#     -# The problem here will be that index starts with 0.
+    -#     - if i % 4 != 0
+    -#       %em.c4= link_to subcategory.name, category_subcategory_path(@jobs, subcategory)
+    -#     - if i % 4 == 0
+    -#       = link_to subcategory.name, category_subcategory_path(@jobs, subcategory)
+    -#       %br
+
+    -# - @jobs.subcategories.each_slice(4) do |*first_subcategories, last_subcategory|
+    -#   - first_subcategories.each do |subcategory|
+    -#     %em.c4= link_to subcategory.name, category_subcategory_path(@jobs, subcategory)
+    -#   = link_to last_subcategory.name, category_subcategory_path(@jobs, last_subcategory)
+    -#   %br
+
+    - @jobs.subcategories.each_with_index do |subcategory, i|
+      - section_break = (i+1) % 4 == 0
+      - if section_break
+        = link_to subcategory.name, category_subcategory_path(@jobs, subcategory)
+        %br
+      - else
+        %em.c4= link_to subcategory.name, category_subcategory_path(@jobs, subcategory)
+
     .line
     = render 'pages/mock/industries'
     .line
