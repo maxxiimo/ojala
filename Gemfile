@@ -18,6 +18,7 @@ gem 'devise'
 gem 'figaro'
 gem 'puma'
 gem 'delayed_job_active_record'
+gem 'geocoder'
 
 # Compass specific gems.
 gem 'compass-rails'
