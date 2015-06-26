@@ -11,7 +11,7 @@
     %h2= link_to 'Miami ' + @real_estate.name, category_path(@real_estate)
     -# NOTE ccm: Had to provide order, array reversed in Heroku. Weird?
     -# Try to move into controller, but did not work.
-    - @real_estate.subcategories.each_with_index do |subcategory, i|
+    - @real_estate.subcategories.order('id ASC').each_with_index do |subcategory, i|
       - section_break = (i+1) % 2 == 0
       - if section_break
         = link_to subcategory.name, category_subcategory_path(@real_estate, subcategory)
@@ -27,7 +27,7 @@
       = link_to @used_cars.name, category_path(@used_cars)
       %span= link_to 'nationwide'
       %span= link_to 'local dealers'
-    - @used_cars.subcategories.each_with_index do |subcategory, i|
+    - @used_cars.subcategories.order('id ASC').each_with_index do |subcategory, i|
       - section_break = (i+1) % 2 == 0
       - if section_break
         = link_to subcategory.name, category_subcategory_path(@used_cars, subcategory)
@@ -39,7 +39,7 @@
     %h3
       = link_to @new_cars.name, category_path(@new_cars)
       %span= link_to 'new ford fusion', mock_home_path, class: 'red'
-    - @new_cars.subcategories.each_with_index do |subcategory, index|
+    - @new_cars.subcategories.order('id ASC').each_with_index do |subcategory, index|
       - if index.even?
         %em.c2= link_to subcategory.name, category_subcategory_path(@new_cars, subcategory)
       - if index.odd?
@@ -48,7 +48,7 @@
     .line
     -# FIXME ccm: Needs %h5 Maintenance
     %h3= link_to @automotive_services.name, category_path(@automotive_services)
-    - @automotive_services.subcategories.each_with_index do |subcategory, i|
+    - @automotive_services.subcategories.order('id ASC').each_with_index do |subcategory, i|
       - section_break = (i+1) % 2 == 0
       - if section_break
         = link_to subcategory.name, category_subcategory_path(@automotive_services, subcategory)
@@ -58,7 +58,7 @@
     .line
 
     %h3= link_to @education_and_training.name, category_path(@education_and_training)
-    - @education_and_training.subcategories.each_with_index do |subcategory, i|
+    - @education_and_training.subcategories.order('id ASC').each_with_index do |subcategory, i|
       - section_break = (i+1) % 2 == 0
       - if section_break
         = link_to subcategory.name, category_subcategory_path(@education_and_training, subcategory)
@@ -76,7 +76,7 @@
     -# %h5 Department Store • General
     -# %h5 Office Equipment
     -# FIXME ccm: Will also need to be able to apply classes to specific items.
-    - @for_sale.subcategories.each_with_index do |subcategory, i|
+    - @for_sale.subcategories.order('id ASC').each_with_index do |subcategory, i|
       - section_break = (i+1) % 2 == 0
       - if section_break
         = link_to subcategory.name, category_subcategory_path(@for_sale, subcategory)
@@ -86,7 +86,7 @@
     .line
 
     %h3= link_to @pets_pet_products.name, category_path(@pets_pet_products)
-    - @pets_pet_products.subcategories.each_with_index do |subcategory, i|
+    - @pets_pet_products.subcategories.order('id ASC').each_with_index do |subcategory, i|
       - section_break = (i+1) % 2 == 0
       - if section_break
         = link_to subcategory.name, category_subcategory_path(@pets_pet_products, subcategory)
@@ -96,7 +96,7 @@
     .line
 
     %h3= link_to @ticketing.name, category_path(@ticketing)
-    - @ticketing.subcategories.each_with_index do |subcategory, i|
+    - @ticketing.subcategories.order('id ASC').each_with_index do |subcategory, i|
       - section_break = (i+1) % 2 == 0
       - if section_break
         = link_to subcategory.name, category_subcategory_path(@ticketing, subcategory)
@@ -110,7 +110,7 @@
       %span= link_to 'create online resume', mock_home_path
 
     -# - @jobs.subcategories.each_slice(4) do |array|
-    -#   - array.each_with_index do |subcategory, i|
+    -#   - array.order('id ASC').each_with_index do |subcategory, i|
     -#     -# The problem here will be that index starts with 0.
     -#     - if i % 4 != 0
     -#       %em.c4= link_to subcategory.name, category_subcategory_path(@jobs, subcategory)
@@ -124,7 +124,7 @@
     -#   = link_to last_subcategory.name, category_subcategory_path(@jobs, last_subcategory)
     -#   %br
 
-    - @jobs.subcategories.each_with_index do |subcategory, i|
+    - @jobs.subcategories.order('id ASC').each_with_index do |subcategory, i|
       - section_break = (i+1) % 4 == 0
       - if section_break
         = link_to subcategory.name, category_subcategory_path(@jobs, subcategory)
@@ -135,7 +135,7 @@
 
     %h3= link_to @top_industries.name, category_path(@top_industries)
 
-    -# - @top_industries.subcategories.each_with_index do |subcategory, i|
+    -# - @top_industries.subcategories.order('id ASC').each_with_index do |subcategory, i|
     -#   - second_column = (i+1) % 2 == 0
     -#   - third_column = (i+1) % 3 == 0
     -#   - if third_column
@@ -146,7 +146,7 @@
     -#   - else
     -#     %em.c3a= link_to subcategory.name, category_subcategory_path(@top_industries, subcategory)
 
-    - @top_industries.subcategories.each_slice(3) do |s1, s2, s3|
+    - @top_industries.subcategories.order('id ASC').each_slice(3) do |s1, s2, s3|
       - unless s1.nil?
         %em.c3a= link_to s1.name, category_subcategory_path(@top_industries, s1)
       - unless s2.nil?
@@ -157,7 +157,7 @@
     .line
 
     %h3= link_to @part_time_jobs.name, category_path(@part_time_jobs)
-    - @part_time_jobs.subcategories.each_with_index do |subcategory, i|
+    - @part_time_jobs.subcategories.order('id ASC').each_with_index do |subcategory, i|
       - section_break = (i+1) % 4 == 0
       - if section_break
         = link_to subcategory.name, category_subcategory_path(@part_time_jobs, subcategory)
@@ -169,7 +169,7 @@
     %h3
       = link_to @resumes.name, category_path(@resumes)
       %span= link_to 'resume search', mock_home_path
-    - @resumes.subcategories.each_with_index do |subcategory, i|
+    - @resumes.subcategories.order('id ASC').each_with_index do |subcategory, i|
       - section_break = (i+1) % 3 == 0
       - if section_break
         = link_to subcategory.name, category_subcategory_path(@resumes, subcategory)
@@ -181,7 +181,7 @@
     %h3
       = link_to @meet_up.name, category_path(@meet_up)
       %span= link_to 'start a group', mock_home_path
-    - @meet_up.subcategories.each_slice(3) do |s1, s2, s3|
+    - @meet_up.subcategories.order('id ASC').each_slice(3) do |s1, s2, s3|
       - unless s1.nil?
         %em.c3a= link_to s1.name, category_subcategory_path(@meet_up, s1)
       - unless s2.nil?
@@ -192,7 +192,7 @@
     .line
 
     %h3= link_to 'Miami ' + @dating.name, category_path(@dating)
-    - @dating.subcategories.each_with_index do |subcategory, i|
+    - @dating.subcategories.order('id ASC').each_with_index do |subcategory, i|
       - section_break = (i+1) % 2 == 0
       - if section_break
         = link_to subcategory.name, category_subcategory_path(@dating, subcategory)
@@ -205,7 +205,7 @@
     .line
 
     %h3= link_to @home.name, category_path(@home)
-    - @home.subcategories.each_with_index do |subcategory, i|
+    - @home.subcategories.order('id ASC').each_with_index do |subcategory, i|
       - section_break = (i+1) % 3 == 0
       - if section_break
         = link_to subcategory.name, category_subcategory_path(@home, subcategory)
@@ -215,7 +215,7 @@
     .line
 
     %h3= link_to @tourism.name, category_path(@tourism)
-    - @tourism.subcategories.each_with_index do |subcategory, i|
+    - @tourism.subcategories.order('id ASC').each_with_index do |subcategory, i|
       - section_break = (i+1) % 3 == 0
       - if section_break
         = link_to subcategory.name, category_subcategory_path(@tourism, subcategory)
@@ -226,7 +226,7 @@
     .line
 
     %h3= link_to @business.name, category_path(@business)
-    - @business.subcategories.each_with_index do |subcategory, i|
+    - @business.subcategories.order('id ASC').each_with_index do |subcategory, i|
       - section_break = (i+1) % 2 == 0
       - if section_break
         = link_to subcategory.name, category_subcategory_path(@business, subcategory)
@@ -236,7 +236,7 @@
     .line
 
     %h3= link_to @recreation.name, category_path(@recreation)
-    - @recreation.subcategories.each_with_index do |subcategory, i|
+    - @recreation.subcategories.order('id ASC').each_with_index do |subcategory, i|
       - section_break = (i+1) % 2 == 0
       - if section_break
         = link_to subcategory.name, category_subcategory_path(@recreation, subcategory)
@@ -246,7 +246,7 @@
     .line
 
     %h3= link_to @healthcare.name, category_path(@healthcare)
-    - @healthcare.subcategories.each_with_index do |subcategory, i|
+    - @healthcare.subcategories.order('id ASC').each_with_index do |subcategory, i|
       - section_break = (i+1) % 3 == 0
       - if section_break
         = link_to subcategory.name, category_subcategory_path(@healthcare, subcategory)
@@ -256,7 +256,7 @@
     .line
 
     %h3= link_to @dining.name, category_path(@dining)
-    - @dining.subcategories.each_with_index do |subcategory, i|
+    - @dining.subcategories.order('id ASC').each_with_index do |subcategory, i|
       - section_break = (i+1) % 3 == 0
       - if section_break
         = link_to subcategory.name, category_subcategory_path(@dining, subcategory)
@@ -266,7 +266,7 @@
     .line
 
     %h3= link_to @farming_livestock.name, category_path(@farming_livestock)
-    - @farming_livestock.subcategories.each_with_index do |subcategory, i|
+    - @farming_livestock.subcategories.order('id ASC').each_with_index do |subcategory, i|
       - section_break = (i+1) % 2 == 0
       - if section_break
         = link_to subcategory.name, category_subcategory_path(@farming_livestock, subcategory)
@@ -276,7 +276,7 @@
     .line
 
     %h3= link_to @beauty.name, category_path(@beauty)
-    - @beauty.subcategories.each_with_index do |subcategory, i|
+    - @beauty.subcategories.order('id ASC').each_with_index do |subcategory, i|
       - section_break = (i+1) % 4 == 0
       - if section_break
         = link_to subcategory.name, category_subcategory_path(@beauty, subcategory)
