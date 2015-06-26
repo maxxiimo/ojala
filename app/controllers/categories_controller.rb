@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
   def index
     # @categories             = Category.all
     # NOTE ccm: Had to provide order, array reversed in Heroku. Weird?
-    @categories             = Category.select('ID, name').order('ID')
+    @categories             = Category.select('ID, name').order('id ASC')
     @automotive_services    = @categories[0]
     @beauty                 = @categories[1]
     @business               = @categories[2]
