@@ -5,8 +5,8 @@ class CategoriesController < ApplicationController
     # @categories             = Category.all
     # FIXME ccm: Add .order('') here, out of view.
     # This is not doing the trick:
-    # @categories             = Category.select('ID, name').order('id ASC')
-    @categories             = Category.select('ID, name')
+    @categories             = Category.select('id, name').order('id ASC')
+    # @categories             = Category.select('id, name')
     @automotive_services    = @categories[0]
     @beauty                 = @categories[1]
     @business               = @categories[2]
