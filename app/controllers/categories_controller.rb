@@ -3,8 +3,10 @@ class CategoriesController < ApplicationController
   # FIXME ccm: Change from hard coding category.
   def index
     # @categories             = Category.all
-    # NOTE ccm: Had to provide order, array reversed in Heroku. Weird?
-    @categories             = Category.select('ID, name').order('id ASC')
+    # FIXME ccm: Add .order('') here, out of view.
+    # This is not doing the trick:
+    # @categories             = Category.select('ID, name').order('id ASC')
+    @categories             = Category.select('ID, name')
     @automotive_services    = @categories[0]
     @beauty                 = @categories[1]
     @business               = @categories[2]
