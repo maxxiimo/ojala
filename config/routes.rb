@@ -6,7 +6,11 @@ Rails.application.routes.draw do
     resources :subcategories
   end
 
-  resources :listings
+  resources :listings do
+    collection do
+      get 'search'
+    end
+  end
 
   get 'splash',   to: 'pages#splash',  as: :mock_splash
   get 'home',     to: 'pages#home',    as: :mock_home

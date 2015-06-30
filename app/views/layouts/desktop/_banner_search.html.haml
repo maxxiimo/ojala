@@ -1,6 +1,9 @@
-%form
-  = form_tag do
-    .search-input
-      = text_field_tag 'Search'
-    .search-button
-      = submit_tag 'Search'
+= form_tag search_listings_path, method: :get do
+  / .search-input
+  = text_field_tag :search, nil, placeholder: 'I\'m looking for...'
+  / .search-near
+  = text_field_tag :location, nil, placeholder: 'Near'
+  / .search-categor
+  = select_tag :category, options_for_select(Category.all.map { |c| [c.name,  c.id] })
+  / .search-button
+  = submit_tag 'Search'
